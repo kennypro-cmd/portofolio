@@ -42,7 +42,7 @@
     @media(min-width:640px){.wrap{padding-inline:1.5rem}}@media(min-width:1024px){.wrap{padding-inline:2rem}}
     main{flex:1}
     .grad{background:linear-gradient(90deg,var(--color-blue),var(--color-orange),var(--color-red));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
- 
+
     /* HEADER */
     header{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(255,255,255,.8);border-bottom:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)}
     html.dark header{background:rgba(11,11,11,.8)}
@@ -66,16 +66,16 @@
     nav.m.open{display:flex}
     nav.m a{display:block;padding:.5rem 1rem;border-radius:.5rem;color:var(--foreground)}
     nav.m a:hover{background:var(--muted)}
- 
+
     /* FOOTER */
     footer{margin-top:auto;border-top:1px solid var(--border);background:rgba(255,255,255,.5);backdrop-filter:blur(8px)}
     html.dark footer{background:rgba(11,11,11,.5)}
     .f-inner{padding:1.5rem 0;text-align:center}
     footer small{color:var(--muted-fg);font-size:.875rem}
- 
+
     /* PAGES */
     .page{display:none}.page.active{display:block}
- 
+
     /* HOME */
     .home{padding:3rem 0}.home .wrap{display:flex;flex-direction:column;gap:3rem}
     .sec-title{font-size:1.875rem;font-weight:500;margin-bottom:1.5rem}
@@ -92,7 +92,7 @@
     #s-about{animation:fadeIn .5s ease-out both}
     #s-skills{animation:fadeIn .7s ease-out both}
     #s-links{animation:fadeIn .9s ease-out both}
- 
+
     /* PROJETS */
     .projets{padding:3rem 0}
     .filter-box{display:inline-flex;flex-wrap:wrap;gap:.75rem;align-items:center;background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:.75rem;padding:1rem;margin-bottom:1.5rem}
@@ -114,7 +114,7 @@
     .c-meta{margin:0 1rem;color:var(--muted-fg);font-size:.875rem}
     .c-btn{align-self:flex-start;margin:.75rem 1rem 1rem;background:linear-gradient(90deg,var(--color-blue),var(--color-blue-light));color:white;padding:.5rem 1.25rem;border-radius:.5rem;font-size:.95rem;font-weight:500;border:none;transition:box-shadow .2s,transform .2s}
     .c-btn:hover{box-shadow:0 4px 12px rgba(59,130,246,.4);transform:translateY(-2px)}
- 
+
     /* DETAIL */
     .detail{padding:2.5rem 0 5rem;animation:fadeIn .4s ease both}
     /* breadcrumb */
@@ -174,7 +174,7 @@
     .d-gitem{flex-shrink:0;width:10rem;height:6.5rem;border-radius:.5rem;background:linear-gradient(135deg,var(--color-blue),var(--color-orange),var(--color-red));display:flex;align-items:center;justify-content:center;font-size:2rem;border:1px solid var(--border);opacity:.7;transition:opacity .2s,transform .2s;overflow:hidden;cursor:pointer}
     .d-gitem:hover{opacity:1;transform:scale(1.04)}
     .d-gitem img{width:100%;height:100%;object-fit:cover}
- 
+
     /* LIGHTBOX */
     .lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.92);align-items:center;justify-content:center;animation:fadeIn .2s ease}
     .lightbox.open{display:flex}
@@ -189,7 +189,12 @@
     .d-pdf-frame{width:100%;height:520px;border-radius:.75rem;border:1px solid var(--border);box-shadow:var(--shadow)}
     .d-pdf-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:.6rem;font-size:.875rem;color:var(--color-blue);text-decoration:underline}
     .d-pdf-link:hover{color:var(--color-blue-dark)}
- 
+
+    /* VIDEO player */
+    .d-video-wrap{margin-bottom:2rem}
+    .d-video-wrap h3{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);margin-bottom:.75rem}
+    .d-video{width:100%;border-radius:.75rem;border:1px solid var(--border);box-shadow:var(--shadow);background:#000;max-height:480px}
+
     /* CONTACT */
     .contact-pg{padding:2rem 1rem}@media(min-width:640px){.contact-pg{padding:3rem 1.5rem}}
     .ct-wrap{max-width:48rem;margin-inline:auto}
@@ -214,7 +219,7 @@
   </style>
 </head>
 <body>
- 
+
 <!-- ── HEADER ── -->
 <header>
   <div class="wrap">
@@ -245,10 +250,10 @@
     </nav>
   </div>
 </header>
- 
+
 <!-- ── MAIN ── -->
 <main>
- 
+
   <!-- HOME -->
   <div id="page-home" class="page active">
     <div class="home">
@@ -257,8 +262,7 @@
           <h2 id="ta" class="sec-title grad">À propos</h2>
           <div class="about-row">
             <figure class="av-card" style="margin:0"><div class="av-inner"><img src="photo.jpg" alt="Kenny GOFFIN" onerror="this.style.display='none';this.parentNode.innerHTML='<span style=\'color:white;font-size:2.25rem;font-weight:bold\'>KG</span>'"></div></figure>
-            <p>Je suis rigoureux, curieux et créatif. J’ai un intérêt marqué pour les jeux vidéo, le contenu vidéo et les sports de combat. J’utilise régulièrement CapCut et Canva.
-Mon projet professionnel est en cours de construction, dans une démarche d’apprentissage et de découverte des différents métiers du numérique. </p>
+            <p class="bio">Je suis rigoureux, curieux et créatif. J'ai un intérêt marqué pour les jeux vidéo, le contenu vidéo et les sports de combat. J'utilise régulièrement CapCut et Canva. Mon projet professionnel est en cours de construction, dans une démarche d'apprentissage et de découverte des différents métiers du numérique.</p>
           </div>
         </section>
         <section id="s-skills" aria-labelledby="tc">
@@ -280,7 +284,7 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
       </div>
     </div>
   </div>
- 
+
   <!-- PROJETS -->
   <div id="page-projets" class="page">
     <div class="projets">
@@ -299,12 +303,12 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
       </div>
     </div>
   </div>
- 
+
   <!-- PROJECT DETAIL -->
   <div id="page-detail" class="page">
     <div class="detail">
       <div class="wrap">
- 
+
         <!-- Breadcrumb -->
         <div class="d-crumb">
           <button class="d-back" onclick="backProjects()">
@@ -314,7 +318,7 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
           <span class="d-crumb-sep">/</span>
           <span class="d-crumb-cur" id="dCrumbTitle"></span>
         </div>
- 
+
         <!-- Hero banner -->
         <div class="d-hero-wrap">
           <div class="d-hero" id="dHero"></div>
@@ -323,15 +327,15 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
             <span class="d-hero-yr" id="dYr"></span>
           </div>
         </div>
- 
+
         <!-- Title + short desc -->
         <h2 class="d-title" id="dTitle"></h2>
         <p class="d-subtitle" id="dSubtitle"></p>
         <div class="d-div"></div>
- 
+
         <!-- Galerie prévisualisation (déco) -->
         <div class="d-gallery" id="dGallery"></div>
- 
+
         <!-- PDF viewer (affiché seulement si le projet en a un) -->
         <div class="d-pdf-wrap" id="dPdfWrap" style="display:none">
           <h3>📄 Document du projet</h3>
@@ -341,7 +345,16 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
             Ouvrir en plein écran
           </a>
         </div>
- 
+
+        <!-- Video player (affiché seulement si le projet en a une) -->
+        <div class="d-video-wrap" id="dVideoWrap" style="display:none">
+          <h3>🎬 Vidéo du projet</h3>
+          <video class="d-video" id="dVideo" controls preload="metadata">
+            <source id="dVideoSrc" src="" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+          </video>
+        </div>
+
         <!-- Body : description + sidebar -->
         <div class="d-body">
           <div class="d-desc-wrap">
@@ -362,7 +375,7 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
             </div>
           </aside>
         </div>
- 
+
         <!-- Prev / Next nav -->
         <div class="d-nav">
           <button class="d-nbtn" id="bPrev" onclick="navProj(-1)">
@@ -380,11 +393,11 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 19l7-7-7-7"/></svg>
           </button>
         </div>
- 
+
       </div>
     </div>
   </div>
- 
+
   <!-- CONTACT -->
   <div id="page-contact" class="page">
     <div class="contact-pg">
@@ -397,7 +410,7 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
           <svg class="ico-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           <div><strong>Message envoyé !</strong> Merci, je vous répondrai dès que possible.</div>
         </div>
-        <form class="ct-form" id="ctForm" action="https://formspree.io/f/mvzwevrb" method="POST" novalidate>
+        <form class="ct-form" id="ctForm" action="https://formspree.io/f/TON_ID_ICI" method="POST" novalidate>
           <p class="hint">Les champs marqués d'un <span>*</span> sont obligatoires.</p>
           <div class="field">
             <label class="flabel" for="nom">
@@ -413,7 +426,7 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
               <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               Adresse email <span class="req">*</span>
             </label>
-            <p class="fdesc">Format attendu : <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1a4b9a4acb1ada481a5aeaca0a8afa4efa7b3">[email&#160;protected]</a></p>
+            <p class="fdesc">Format attendu : goffin.kenny.pro@gmail.com</p>
             <input class="finput" type="email" id="email" name="email" placeholder="exemple@domaine.fr" autocomplete="email"/>
             <p class="ferr" id="e-email"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg><span></span></p>
           </div>
@@ -435,9 +448,9 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
       </div>
     </div>
   </div>
- 
+
 </main>
- 
+
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <div class="lightbox-inner" onclick="event.stopPropagation()">
@@ -446,7 +459,7 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
     <span class="lightbox-hint">Clic en dehors ou ✕ pour fermer</span>
   </div>
 </div>
- 
+
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
@@ -455,217 +468,314 @@ Mon projet professionnel est en cours de construction, dans une démarche d’ap
     </div>
   </div>
 </footer>
- 
- 
+
+
+
 <script>
-const PROJECTS=[
-  {title:"Projet 1 — Logo Velocity",desc:"Création d'un logo professionnel pour une entreprise fictive à partir d'un brief créatif.",tag:"ui",meta:"Petit • 2025",img:"projet1.png",
-   detail:{long:"<p>Dans le cadre de ce projet, j'ai conçu le logo <strong>Velocity</strong> pour une entreprise fictive spécialisée dans la vitesse et la performance. Le travail partait d'un brief créatif basé sur un client persona imaginaire, avec des contraintes de lisibilité, de modernité et d'impact visuel.</p><p>J'ai exploré plusieurs directions artistiques avant de converger vers un design final épuré en noir et blanc, jouant sur la typographie bold et des lignes dynamiques évoquant le mouvement.</p><p>Ce projet m'a permis de m'exercer à la lecture d'un brief et à la traduction d'une identité de marque en solution graphique concrète.</p>",
-    cat:"Design graphique",size:"Petit",year:"2025",status:"Terminé",sc:"done",tools:["Photoshop"],pdf:null,gallery:["projet1.png"]}},
-  {title:"Projet 2 — Autoformation aux logiciels professionnels",desc:"Je me forme en autonomie à des logiciels professionnels du numérique et de la communication.",tag:"code",meta:"Grand • 2026",img:null,
-   detail:{long:"<p>Ce projet s'inscrit dans une logique d'apprentissage continu à travers la pratique. Je me forme actuellement en autonomie à l'utilisation de logiciels professionnels du domaine du numérique et de la communication.</p><p>Je réalise des essais et des mini-projets afin de prendre en main différents outils et d'en comprendre les usages professionnels.</p><p>Chaque outil maîtrisé représente une compétence supplémentaire précieuse pour ma future carrière dans le domaine du MMI.</p>",
-    cat:"Auto-formation",size:"Grand",year:"2026",status:"En cours",sc:"ongoing",tools:["Adobe Premiere Pro","Adobe After Effects","Python"],pdf:null,gallery:[]}},
-  {title:"Projet 3 — Affiche Sigmar Polke",desc:"Réalisation d'une affiche inspirée du travail de Sigmar Polke dans le cadre d'un exercice de création graphique.",tag:"ui",meta:"Petit • 2026",img:"project_3.png",
-   detail:{long:"<p>Dans le cadre d'un exercice de création graphique, j'ai réalisé une affiche pour une exposition fictive dédiée à <strong>Sigmar Polke</strong>, artiste majeur du Pop Art allemand connu pour ses expérimentations visuelles.</p><p>Ce projet m'a permis d'explorer les codes visuels propres à cet artiste : les jeux de matières, la superposition de couches d'images et la typographie audacieuse.</p><p>L'affiche intègre le traitement de l'image et la gestion des typographies à fort impact dans un espace contraint.</p>",
-    cat:"Design graphique",size:"Petit",year:"2026",status:"Terminé",sc:"done",tools:["Photoshop"],pdf:null,gallery:["project_3.png"]}},
-  {title:"Projet 4 — Campagne Lay's Racines (Groupe)",desc:"Stratégie de communication complète pour la marque Lay's réalisée en groupe.",tag:"code",meta:"Grand • 2025",img:"moonboard.jpg",
-   detail:{long:"<p>Dans le cadre d'un projet de groupe en stratégie de communication, nous avons conçu une campagne complète pour la marque <strong>Lay's</strong>, autour de l'axe <em>Lay's Racines</em>.</p><p>Notre équipe a travaillé sur le positionnement, les axes stratégiques, le moodboard, les messages clés et un plan de déploiement sur 4 phases.</p><p>Ce projet m'a permis de comprendre comment construire une stratégie de communication cohérente de A à Z.</p>",
-    cat:"Stratégie de communication",size:"Grand",year:"2025",status:"Terminé",sc:"done",tools:["Canva","PowerPoint"],pdf:"Lays_Presentation.pdf",gallery:["moonboard.jpg"]}}
+var PROJECTS = [
+  {
+    title: "Projet 1 \u2014 Logo Velocity",
+    desc: "Cr\u00e9ation d'un logo professionnel pour une entreprise fictive \u00e0 partir d'un brief cr\u00e9atif.",
+    tag: "ui", meta: "Petit \u2022 2025", img: "projet1.png",
+    detail: {
+      long: "<p>Dans le cadre de ce projet, j'ai con\u00e7u le logo <strong>Velocity</strong> pour une entreprise fictive sp\u00e9cialis\u00e9e dans la vitesse et la performance. Le travail partait d'un brief cr\u00e9atif bas\u00e9 sur un client persona imaginaire.</p><p>J'ai explor\u00e9 plusieurs directions artistiques avant de converger vers un design final \u00e9pur\u00e9 en noir et blanc, jouant sur la typographie bold et des lignes dynamiques \u00e9voquant le mouvement.</p><p>Ce projet m'a permis de m'exercer \u00e0 la lecture d'un brief et \u00e0 la traduction d'une identit\u00e9 de marque en solution graphique concr\u00e8te.</p>",
+      cat: "Design graphique", size: "Petit", year: "2025", status: "Termin\u00e9", sc: "done",
+      tools: ["Photoshop"], pdf: null, video: null, gallery: ["projet1.png"]
+    }
+  },
+  {
+    title: "Projet 2 \u2014 Autoformation aux logiciels professionnels",
+    desc: "Je me forme en autonomie \u00e0 des logiciels professionnels du num\u00e9rique et de la communication.",
+    tag: "code", meta: "Grand \u2022 2026", img: null,
+    detail: {
+      long: "<p>Ce projet s'inscrit dans une logique d'apprentissage continu \u00e0 travers la pratique. Je me forme actuellement en autonomie \u00e0 l'utilisation de logiciels professionnels du domaine du num\u00e9rique et de la communication.</p><p>Je r\u00e9alise des essais et des mini-projets afin de prendre en main diff\u00e9rents outils et d'en comprendre les usages professionnels.</p><p>Chaque outil ma\u00eetris\u00e9 repr\u00e9sente une comp\u00e9tence suppl\u00e9mentaire pr\u00e9cieuse pour ma future carri\u00e8re dans le domaine du MMI.</p>",
+      cat: "Auto-formation", size: "Grand", year: "2026", status: "En cours", sc: "ongoing",
+      tools: ["Adobe Premiere Pro", "Adobe After Effects", "Python"], pdf: null, video: null, gallery: []
+    }
+  },
+  {
+    title: "Projet 3 \u2014 Affiche Sigmar Polke",
+    desc: "R\u00e9alisation d'une affiche inspir\u00e9e du travail de Sigmar Polke dans le cadre d'un exercice de cr\u00e9ation graphique.",
+    tag: "ui", meta: "Petit \u2022 2026", img: "project_3.png",
+    detail: {
+      long: "<p>Dans le cadre d'un exercice de cr\u00e9ation graphique, j'ai r\u00e9alis\u00e9 une affiche pour une exposition fictive d\u00e9di\u00e9e \u00e0 <strong>Sigmar Polke</strong>, artiste majeur du Pop Art allemand connu pour ses exp\u00e9rimentations visuelles.</p><p>Ce projet m'a permis d'explorer les codes visuels propres \u00e0 cet artiste : les jeux de mati\u00e8res, la superposition de couches d'images et la typographie audacieuse.</p><p>L'affiche int\u00e8gre le traitement de l'image et la gestion des typographies \u00e0 fort impact dans un espace contraint.</p>",
+      cat: "Design graphique", size: "Petit", year: "2026", status: "Termin\u00e9", sc: "done",
+      tools: ["Photoshop"], pdf: null, video: null, gallery: ["project_3.png"]
+    }
+  },
+  {
+    title: "Projet 4 \u2014 Campagne Lay's Racines (Groupe)",
+    desc: "Strat\u00e9gie de communication compl\u00e8te pour la marque Lay's r\u00e9alis\u00e9e en groupe.",
+    tag: "code", meta: "Grand \u2022 2025", img: "moonboard.jpg",
+    detail: {
+      long: "<p>Dans le cadre d'un projet de groupe en strat\u00e9gie de communication, nous avons con\u00e7u une campagne compl\u00e8te pour la marque <strong>Lay's</strong>, autour de l'axe <em>Lay's Racines</em>.</p><p>Notre \u00e9quipe a travaill\u00e9 sur le positionnement, les axes strat\u00e9giques, le moodboard, les messages cl\u00e9s et un plan de d\u00e9ploiement sur 4 phases.</p><p>Ce projet m'a permis de comprendre comment construire une strat\u00e9gie de communication coh\u00e9rente de A \u00e0 Z.</p>",
+      cat: "Strat\u00e9gie de communication", size: "Grand", year: "2025", status: "Termin\u00e9", sc: "done",
+      tools: ["Canva", "PowerPoint"], pdf: "Lays_Presentation.pdf", video: null, gallery: ["moonboard.jpg"]
+    }
+  },
+  {
+    title: "Projet 5 \u2014 Reportage : Racisme et M\u00e9ritocratie",
+    desc: "Reportage documentaire sur le racisme et la m\u00e9ritocratie. Mon r\u00f4le : documentaliste.",
+    tag: "ui", meta: "Grand \u2022 2025", img: null,
+    detail: {
+      long: "<p>Dans le cadre d'un projet de reportage, notre \u00e9quipe a travaill\u00e9 sur un sujet sensible et essentiel : <strong>le racisme et la m\u00e9ritocratie</strong>. Ce documentaire explore comment les discriminations raciales peuvent freiner ou biaiser la reconnaissance du m\u00e9rite individuel dans diff\u00e9rents contextes sociaux et professionnels.</p><p>Mon r\u00f4le au sein de l'\u00e9quipe \u00e9tait celui de <strong>documentaliste</strong> : j'ai effectu\u00e9 les recherches de fond, s\u00e9lectionn\u00e9 et v\u00e9rifi\u00e9 les sources, rassembl\u00e9 les donn\u00e9es et les r\u00e9f\u00e9rences n\u00e9cessaires \u00e0 la construction du discours documentaire.</p><p>Ce projet m'a permis de d\u00e9velopper mes comp\u00e9tences en recherche documentaire, en analyse critique de l'information et en travail collaboratif sur un sujet \u00e0 fort enjeu soci\u00e9tal.</p>",
+      cat: "Reportage / Documentaire", size: "Grand", year: "2025", status: "Termin\u00e9", sc: "done",
+      tools: ["Recherche documentaire", "CapCut"], pdf: null, video: "reportage.mp4", gallery: []
+    }
+  },
+  {
+    title: "Projet 6 \u2014 Site Web Green Pitch (Groupe)",
+    desc: "Cr\u00e9ation d'un site web de sensibilisation \u00e0 la pratique sportive pour l'association fictive Green Pitch.",
+    tag: "code", meta: "Grand \u2022 2025", img: "Green1.jpeg",
+    detail: {
+      long: "<p>Dans le cadre de la SAE 1.05, notre groupe a con\u00e7u et d\u00e9velopp\u00e9 le site web de <strong>Green Pitch</strong>, une association sportive multi-sports fictive bas\u00e9e \u00e0 Saint-Claude, en Guadeloupe. L'objectif : cr\u00e9er un site accessible, ergonomique et bilingue pour valoriser la pratique sportive aupr\u00e8s d'un large public.</p><p>Le site pr\u00e9sente 7 disciplines (football, tennis, natation, volleyball, basketball, athl\u00e9tisme et e-sport). Nous avons suivi une d\u00e9marche compl\u00e8te : analyse du cahier des charges, wireframes, d\u00e9veloppement HTML/CSS/JS, tests d'accessibilit\u00e9 et validation W3C.</p><p>Points techniques notables : architecture SPA, design responsive mobile-first, mode sombre/clair, version bilingue FR/EN, navigation au clavier avec attributs ARIA, et validation de formulaire en temps r\u00e9el.</p>",
+      cat: "D\u00e9veloppement web", size: "Grand", year: "2025", status: "Termin\u00e9", sc: "done",
+      tools: ["HTML5", "CSS3", "JavaScript", "Figma"], pdf: null, video: null, gallery: ["Green1.jpeg", "Green_logo.jpeg"]
+    }
+  }
 ];
- 
-const htmlEl=document.documentElement;
-const tBtn=document.getElementById('tBtn');
-function setTheme(t){
-  htmlEl.classList.toggle('dark',t==='dark');
-  tBtn.textContent=t==='dark'?'☀️':'🌙';
-  localStorage.setItem('theme',t);
+
+var htmlEl = document.documentElement;
+var tBtn = document.getElementById('tBtn');
+function setTheme(t) {
+  htmlEl.classList.toggle('dark', t === 'dark');
+  tBtn.textContent = t === 'dark' ? '☀️' : '🌙';
+  localStorage.setItem('theme', t);
 }
-setTheme(localStorage.getItem('theme')||'light');
-tBtn.addEventListener('click',function(){setTheme(htmlEl.classList.contains('dark')?'light':'dark');});
- 
-let curPage='home',curFilter='all',curIdx=0;
-function showPage(id){
-  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
-  document.getElementById('page-'+id).classList.add('active');
-  curPage=id; hlNav(id);
-  window.scrollTo({top:0,behavior:'smooth'});
+setTheme(localStorage.getItem('theme') || 'light');
+tBtn.addEventListener('click', function() {
+  setTheme(htmlEl.classList.contains('dark') ? 'light' : 'dark');
+});
+
+var curPage = 'home', curFilter = 'all', curIdx = 0;
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  document.getElementById('page-' + id).classList.add('active');
+  curPage = id;
+  hlNav(id);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-function hlNav(page){
-  var navPage=page==='detail'?'projets':page;
-  var map={home:'nb',projets:'no',contact:'nr'};
-  var cls=map[navPage]||'no';
-  document.querySelectorAll('nav a[data-p]').forEach(function(a){
-    a.classList.remove('nb','no','nr');
-    if(a.dataset.p===navPage) a.classList.add(cls);
+
+function hlNav(page) {
+  var navPage = page === 'detail' ? 'projets' : page;
+  var map = { home: 'nb', projets: 'no', contact: 'nr' };
+  var cls = map[navPage] || 'no';
+  document.querySelectorAll('nav a[data-p]').forEach(function(a) {
+    a.classList.remove('nb', 'no', 'nr');
+    if (a.dataset.p === navPage) a.classList.add(cls);
   });
 }
-function nav(page){showPage(page);if(page==='projets')renderGrid(curFilter);}
-function navM(page){nav(page);closeMenu();}
+
+function nav(page) {
+  showPage(page);
+  if (page === 'projets') renderGrid(curFilter);
+}
+function navM(page) { nav(page); closeMenu(); }
 hlNav('home');
- 
-const mNav=document.getElementById('mNav');
-const bBtn=document.getElementById('bBtn');
-const bIco=document.getElementById('bIco');
-bBtn.addEventListener('click',function(){
-  var open=mNav.classList.toggle('open');
-  bBtn.setAttribute('aria-expanded',open);
-  bIco.textContent=open?'✕':'☰';
+
+var mNav = document.getElementById('mNav');
+var bBtn = document.getElementById('bBtn');
+var bIco = document.getElementById('bIco');
+bBtn.addEventListener('click', function() {
+  var open = mNav.classList.toggle('open');
+  bBtn.setAttribute('aria-expanded', open);
+  bIco.textContent = open ? '✕' : '☰';
 });
-function closeMenu(){mNav.classList.remove('open');bBtn.setAttribute('aria-expanded','false');bIco.textContent='☰';}
- 
-function renderGrid(filter){
-  curFilter=filter;
-  var list=filter==='all'?PROJECTS:PROJECTS.filter(function(p){return p.tag===filter;});
-  document.querySelectorAll('.fb').forEach(function(b){b.classList.remove('fa','fp','fg');});
-  var clsMap={all:'fa',ui:'fp',code:'fg'};
-  var btn=document.querySelector('.fb[data-f="'+filter+'"]');
-  if(btn) btn.classList.add(clsMap[filter]);
-  var fcnt=document.getElementById('fcnt');
-  fcnt.textContent=list.length===PROJECTS.length
-    ?PROJECTS.length+' projet'+(PROJECTS.length>1?'s':'')
-    :list.length+' projet'+(list.length>1?'s':'')+' sur '+PROJECTS.length;
-  var grid=document.getElementById('pgrid');
-  grid.innerHTML='';
-  list.forEach(function(p,i){
-    var realIdx=PROJECTS.indexOf(p);
-    var card=document.createElement('article');
-    card.className='card';
-    card.style.animationDelay=(i*0.06)+'s';
-    card.setAttribute('data-tag',p.tag);
-    var thumb=p.img?'<img src="'+p.img+'" alt="'+p.title+'">':"<span>📁</span>";
-    card.innerHTML='<div class="c-thumb">'+thumb+'</div>'
-      +'<h3 class="c-title">'+p.title+'</h3>'
-      +'<p class="c-desc">'+p.desc+'</p>'
-      +'<p class="c-meta">'+p.meta+'</p>'
-      +'<button class="c-btn" onclick="openProject('+realIdx+')">Voir</button>';
+function closeMenu() {
+  mNav.classList.remove('open');
+  bBtn.setAttribute('aria-expanded', 'false');
+  bIco.textContent = '☰';
+}
+
+function renderGrid(filter) {
+  curFilter = filter;
+  var list = filter === 'all' ? PROJECTS : PROJECTS.filter(function(p) { return p.tag === filter; });
+  document.querySelectorAll('.fb').forEach(function(b) { b.classList.remove('fa', 'fp', 'fg'); });
+  var clsMap = { all: 'fa', ui: 'fp', code: 'fg' };
+  var btn = document.querySelector('.fb[data-f="' + filter + '"]');
+  if (btn) btn.classList.add(clsMap[filter]);
+  var fcnt = document.getElementById('fcnt');
+  fcnt.textContent = list.length === PROJECTS.length
+    ? PROJECTS.length + ' projet' + (PROJECTS.length > 1 ? 's' : '')
+    : list.length + ' projet' + (list.length > 1 ? 's' : '') + ' sur ' + PROJECTS.length;
+  var grid = document.getElementById('pgrid');
+  grid.innerHTML = '';
+  list.forEach(function(p, i) {
+    var realIdx = PROJECTS.indexOf(p);
+    var card = document.createElement('article');
+    card.className = 'card';
+    card.style.animationDelay = (i * 0.06) + 's';
+    card.setAttribute('data-tag', p.tag);
+    var thumb = p.img ? '<img src="' + p.img + '" alt="' + p.title + '">' : '<span>📁</span>';
+    card.innerHTML =
+      '<div class="c-thumb">' + thumb + '</div>' +
+      '<h3 class="c-title">' + p.title + '</h3>' +
+      '<p class="c-desc">' + p.desc + '</p>' +
+      '<p class="c-meta">' + p.meta + '</p>' +
+      '<button class="c-btn" onclick="openProject(' + realIdx + ')">Voir</button>';
     grid.appendChild(card);
   });
 }
-function filterP(f){renderGrid(f);}
- 
-function openProject(idx){
-  curIdx=idx;
-  var p=PROJECTS[idx];
-  var d=p.detail;
-  var hero=document.getElementById('dHero');
-  if(p.img){
-    hero.style.backgroundImage='url('+p.img+')';
-    hero.style.backgroundSize='cover';
-    hero.style.backgroundPosition='center';
-    hero.textContent='';
+function filterP(f) { renderGrid(f); }
+
+function openProject(idx) {
+  curIdx = idx;
+  var p = PROJECTS[idx];
+  var d = p.detail;
+  var hero = document.getElementById('dHero');
+  if (p.img) {
+    hero.style.backgroundImage = 'url(' + p.img + ')';
+    hero.style.backgroundSize = 'cover';
+    hero.style.backgroundPosition = 'center';
+    hero.textContent = '';
   } else {
-    hero.style.backgroundImage='';
-    hero.textContent='📁';
+    hero.style.backgroundImage = '';
+    hero.textContent = '📁';
   }
-  document.getElementById('dTag').textContent=p.tag==='ui'?'Petit':'Grand';
-  document.getElementById('dTag').className='d-tag '+p.tag;
-  document.getElementById('dYr').textContent=d.year;
-  document.getElementById('dTitle').textContent=p.title;
-  document.getElementById('dSubtitle').textContent=p.desc;
-  document.getElementById('dCrumbTitle').textContent='Projet '+(idx+1);
-  document.getElementById('dDesc').innerHTML=d.long;
-  document.getElementById('diCat').textContent=d.cat;
-  document.getElementById('diSize').textContent=d.size;
-  document.getElementById('diYr').textContent=d.year;
-  document.getElementById('diStatus').innerHTML='<span class="sbadge '+d.sc+'">'+d.status+'</span>';
-  document.getElementById('dTools').innerHTML=d.tools.map(function(t){return '<span class="d-tool">'+t+'</span>';}).join('');
-  var galleryEl=document.getElementById('dGallery');
-  if(d.gallery&&d.gallery.length>0){
-    galleryEl.innerHTML=d.gallery.map(function(src){
-      return '<div class="d-gitem" onclick="openLightbox(\''+src+'\')" title="Cliquer pour agrandir"><img src="'+src+'" alt="Aperçu"></div>';
+  document.getElementById('dTag').textContent = p.tag === 'ui' ? 'Petit' : 'Grand';
+  document.getElementById('dTag').className = 'd-tag ' + p.tag;
+  document.getElementById('dYr').textContent = d.year;
+  document.getElementById('dTitle').textContent = p.title;
+  document.getElementById('dSubtitle').textContent = p.desc;
+  document.getElementById('dCrumbTitle').textContent = 'Projet ' + (idx + 1);
+  document.getElementById('dDesc').innerHTML = d.long;
+  document.getElementById('diCat').textContent = d.cat;
+  document.getElementById('diSize').textContent = d.size;
+  document.getElementById('diYr').textContent = d.year;
+  document.getElementById('diStatus').innerHTML = '<span class="sbadge ' + d.sc + '">' + d.status + '</span>';
+  document.getElementById('dTools').innerHTML = d.tools.map(function(t) {
+    return '<span class="d-tool">' + t + '</span>';
+  }).join('');
+  var galleryEl = document.getElementById('dGallery');
+  if (d.gallery && d.gallery.length > 0) {
+    galleryEl.innerHTML = d.gallery.map(function(src) {
+      return '<div class="d-gitem" onclick="openLightbox(\'' + src + '\')" title="Agrandir"><img src="' + src + '" alt="Apercu"></div>';
     }).join('');
-    galleryEl.style.display='flex';
+    galleryEl.style.display = 'flex';
   } else {
-    galleryEl.style.display='none';
+    galleryEl.style.display = 'none';
   }
-  var pdfWrap=document.getElementById('dPdfWrap');
-  if(d.pdf){
-    document.getElementById('dPdfFrame').src=d.pdf;
-    document.getElementById('dPdfLink').href=d.pdf;
-    pdfWrap.style.display='block';
+  var pdfWrap = document.getElementById('dPdfWrap');
+  if (d.pdf) {
+    document.getElementById('dPdfFrame').src = d.pdf;
+    document.getElementById('dPdfLink').href = d.pdf;
+    pdfWrap.style.display = 'block';
   } else {
-    document.getElementById('dPdfFrame').src='';
-    pdfWrap.style.display='none';
+    document.getElementById('dPdfFrame').src = '';
+    pdfWrap.style.display = 'none';
   }
-  var bPrev=document.getElementById('bPrev');
-  var bNext=document.getElementById('bNext');
-  bPrev.disabled=idx===0;
-  bNext.disabled=idx===PROJECTS.length-1;
-  document.getElementById('bPrevTitle').textContent=PROJECTS[idx-1]?'Projet '+idx:'';
-  document.getElementById('bNextTitle').textContent=PROJECTS[idx+1]?'Projet '+(idx+2):'';
+  var videoWrap = document.getElementById('dVideoWrap');
+  var videoEl = document.getElementById('dVideo');
+  if (d.video) {
+    document.getElementById('dVideoSrc').src = d.video;
+    videoEl.load();
+    videoWrap.style.display = 'block';
+  } else {
+    document.getElementById('dVideoSrc').src = '';
+    videoEl.load();
+    videoWrap.style.display = 'none';
+  }
+  var bPrev = document.getElementById('bPrev');
+  var bNext = document.getElementById('bNext');
+  bPrev.disabled = idx === 0;
+  bNext.disabled = idx === PROJECTS.length - 1;
+  document.getElementById('bPrevTitle').textContent = PROJECTS[idx - 1] ? 'Projet ' + idx : '';
+  document.getElementById('bNextTitle').textContent = PROJECTS[idx + 1] ? 'Projet ' + (idx + 2) : '';
   showPage('detail');
 }
-function backProjects(){showPage('projets');renderGrid(curFilter);}
-function navProj(dir){var n=curIdx+dir;if(n>=0&&n<PROJECTS.length)openProject(n);}
- 
-var ctForm=document.getElementById('ctForm');
-var okBanner=document.getElementById('okBanner');
-var cCnt=document.getElementById('cCnt');
-var msgEl=document.getElementById('message');
-msgEl.addEventListener('input',function(){cCnt.textContent=280-msgEl.value.length;});
-function vld(n,v){
-  if(n==='nom'){if(!v.trim())return 'Le nom est requis.';if(v.trim().length<2)return 'Au moins 2 caractères.';}
-  if(n==='email'){if(!v.trim())return "L'email est requis.";if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v))return 'Email invalide.';}
-  if(n==='message'){if(!v.trim())return 'Le message est requis.';if(v.trim().length<10)return 'Au moins 10 caractères ('+v.trim().length+'/10).';}
+function backProjects() { showPage('projets'); renderGrid(curFilter); }
+function navProj(dir) {
+  var n = curIdx + dir;
+  if (n >= 0 && n < PROJECTS.length) openProject(n);
+}
+
+var ctForm = document.getElementById('ctForm');
+var okBanner = document.getElementById('okBanner');
+var cCnt = document.getElementById('cCnt');
+var msgEl = document.getElementById('message');
+msgEl.addEventListener('input', function() { cCnt.textContent = 280 - msgEl.value.length; });
+
+function vld(n, v) {
+  if (n === 'nom') {
+    if (!v.trim()) return 'Le nom est requis.';
+    if (v.trim().length < 2) return 'Au moins 2 caractères.';
+  }
+  if (n === 'email') {
+    if (!v.trim()) return "L'email est requis.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return 'Email invalide.';
+  }
+  if (n === 'message') {
+    if (!v.trim()) return 'Le message est requis.';
+    if (v.trim().length < 10) return 'Au moins 10 caractères (' + v.trim().length + '/10).';
+  }
   return null;
 }
-function setErr(n,msg){
+function setErr(n, msg) {
   document.getElementById(n).classList.add('err');
-  var e=document.getElementById('e-'+n);
-  e.querySelector('span').textContent=msg;
+  var e = document.getElementById('e-' + n);
+  e.querySelector('span').textContent = msg;
   e.classList.add('show');
 }
-function clrErr(n){
+function clrErr(n) {
   document.getElementById(n).classList.remove('err');
-  document.getElementById('e-'+n).classList.remove('show');
+  document.getElementById('e-' + n).classList.remove('show');
 }
-['nom','email','message'].forEach(function(n){
-  var el=document.getElementById(n);
-  el.addEventListener('blur',function(){var e=vld(n,el.value);e?setErr(n,e):clrErr(n);});
-  el.addEventListener('input',function(){if(el.classList.contains('err')&&!vld(n,el.value))clrErr(n);});
-});
-ctForm.addEventListener('submit',function(e){
-  e.preventDefault();
-  var ok=true;
-  ['nom','email','message'].forEach(function(n){
-    var err=vld(n,document.getElementById(n).value);
-    if(err){setErr(n,err);ok=false;}else clrErr(n);
+['nom', 'email', 'message'].forEach(function(n) {
+  var el = document.getElementById(n);
+  el.addEventListener('blur', function() {
+    var e = vld(n, el.value);
+    if (e) setErr(n, e); else clrErr(n);
   });
-  if(!ok)return;
-  var submitBtn=ctForm.querySelector('.sbtn');
-  submitBtn.disabled=true;
-  submitBtn.textContent='Envoi en cours…';
-  fetch(ctForm.action,{method:'POST',body:new FormData(ctForm),headers:{'Accept':'application/json'}})
-    .then(function(res){
-      if(res.ok){
-        ctForm.reset();cCnt.textContent='280';
-        okBanner.classList.add('show');
-        setTimeout(function(){okBanner.classList.remove('show');},5000);
-      } else {
-        alert('Erreur lors de l\'envoi. Réessaie.');
-      }
-      submitBtn.disabled=false;
-      submitBtn.innerHTML='<svg class="ico-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg> Envoyer le message';
-    })
-    .catch(function(){
-      alert('Erreur réseau. Réessaie plus tard.');
-      submitBtn.disabled=false;
-      submitBtn.innerHTML='<svg class="ico-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg> Envoyer le message';
-    });
+  el.addEventListener('input', function() {
+    if (el.classList.contains('err') && !vld(n, el.value)) clrErr(n);
+  });
 });
- 
-function openLightbox(src){
-  document.getElementById('lightboxImg').src=src;
+ctForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  var ok = true;
+  ['nom', 'email', 'message'].forEach(function(n) {
+    var err = vld(n, document.getElementById(n).value);
+    if (err) { setErr(n, err); ok = false; } else clrErr(n);
+  });
+  if (!ok) return;
+  var submitBtn = ctForm.querySelector('.sbtn');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Envoi en cours…';
+  fetch(ctForm.action, {
+    method: 'POST',
+    body: new FormData(ctForm),
+    headers: { 'Accept': 'application/json' }
+  }).then(function(res) {
+    if (res.ok) {
+      ctForm.reset();
+      cCnt.textContent = '280';
+      okBanner.classList.add('show');
+      setTimeout(function() { okBanner.classList.remove('show'); }, 5000);
+    } else {
+      alert('Erreur lors de l\'envoi. Réessaie.');
+    }
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = '<svg class="ico-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg> Envoyer le message';
+  }).catch(function() {
+    alert('Erreur réseau. Réessaie plus tard.');
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = '<svg class="ico-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg> Envoyer le message';
+  });
+});
+
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
   document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow='hidden';
+  document.body.style.overflow = 'hidden';
 }
-function closeLightbox(){
+function closeLightbox() {
   document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
 }
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
- 
-document.getElementById('yr').textContent=new Date().getFullYear();
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+
+document.getElementById('yr').textContent = new Date().getFullYear();
 renderGrid('all');
 </script>
 </body>
