@@ -100,8 +100,11 @@
     .fb{padding:.5rem 1rem;border-radius:9999px;border:1px solid var(--border);background:var(--card);color:var(--muted-fg);font-size:1rem}
     .fb:hover{border-color:var(--color-blue);color:var(--foreground)}
     .fb.fa{background:linear-gradient(90deg,var(--color-blue),var(--color-blue-light));color:white;border-color:transparent;font-weight:600;box-shadow:0 4px 12px rgba(59,130,246,.3)}
-    .fb.fp{background:linear-gradient(90deg,var(--color-orange),var(--color-orange-light));color:white;border-color:transparent;font-weight:600;box-shadow:0 4px 12px rgba(249,115,22,.3)}
-    .fb.fg{background:linear-gradient(90deg,var(--color-red),var(--color-red-light));color:white;border-color:transparent;font-weight:600;box-shadow:0 4px 12px rgba(239,68,68,.3)}
+    .fb.fav{background:linear-gradient(90deg,#8b5cf6,#a78bfa);color:white;border-color:transparent;font-weight:600;box-shadow:0 4px 12px rgba(139,92,246,.3)}
+    .fb.fgr{background:linear-gradient(90deg,var(--color-orange),var(--color-orange-light));color:white;border-color:transparent;font-weight:600;box-shadow:0 4px 12px rgba(249,115,22,.3)}
+    .fb.fst{background:linear-gradient(90deg,var(--color-red),var(--color-red-light));color:white;border-color:transparent;font-weight:600;box-shadow:0 4px 12px rgba(239,68,68,.3)}
+    .fb.fpr{background:linear-gradient(90deg,#06b6d4,#22d3ee);color:white;border-color:transparent;font-weight:600;box-shadow:0 4px 12px rgba(6,182,212,.3)}
+    .fb.fpe{background:linear-gradient(90deg,#10b981,#34d399);color:white;border-color:transparent;font-weight:600;box-shadow:0 4px 12px rgba(16,185,129,.3)}
     .fcnt{font-size:.875rem;color:var(--muted-fg);margin-bottom:1.5rem}
     .grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
     @media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}@media(min-width:1024px){.grid{grid-template-columns:1fr 1fr 1fr}}
@@ -193,7 +196,8 @@
     /* VIDEO player */
     .d-video-wrap{margin-bottom:2rem}
     .d-video-wrap h3{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);margin-bottom:.75rem}
-    .d-video{width:100%;border-radius:.75rem;border:1px solid var(--border);box-shadow:var(--shadow);background:#000;max-height:480px}
+    .d-video-frame{width:100%;aspect-ratio:9/16;max-height:520px;border-radius:.75rem;border:1px solid var(--border);box-shadow:var(--shadow);background:#000}
+    @media(min-width:640px){.d-video-frame{aspect-ratio:16/9;max-height:480px}}
 
     /* CONTACT */
     .contact-pg{padding:2rem 1rem}@media(min-width:640px){.contact-pg{padding:3rem 1.5rem}}
@@ -293,9 +297,12 @@
           <h2 id="tp" class="sec-title grad">Projets</h2>
           <div class="filter-box" role="group" aria-label="Filtres">
             <span class="fleg">Filtrer par :</span>
-            <button class="fb fa" data-f="all"  onclick="filterP('all')">Tous</button>
-            <button class="fb"    data-f="ui"   onclick="filterP('ui')">Petit</button>
-            <button class="fb"    data-f="code" onclick="filterP('code')">Grand</button>
+            <button class="fb fa"  data-f="all"       onclick="filterP('all')">Tous</button>
+            <button class="fb"     data-f="av"        onclick="filterP('av')">Audiovisuel</button>
+            <button class="fb"     data-f="graphique" onclick="filterP('graphique')">Production graphique</button>
+            <button class="fb"     data-f="strat"     onclick="filterP('strat')">Stratégie de com.</button>
+            <button class="fb"     data-f="prog"      onclick="filterP('prog')">Programmation</button>
+            <button class="fb"     data-f="perso"     onclick="filterP('perso')">Personnelle</button>
           </div>
           <p id="fcnt" class="fcnt" role="status" aria-live="polite"></p>
           <div class="grid" id="pgrid"></div>
@@ -349,10 +356,7 @@
         <!-- Video player (affiché seulement si le projet en a une) -->
         <div class="d-video-wrap" id="dVideoWrap" style="display:none">
           <h3>🎬 Vidéo du projet</h3>
-          <video class="d-video" id="dVideo" controls preload="metadata">
-            <source id="dVideoSrc" src="" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture vidéo.
-          </video>
+          <iframe class="d-video-frame" id="dVideo" src="" title="Vidéo du projet" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
         </div>
 
         <!-- Body : description + sidebar -->
@@ -476,7 +480,7 @@ var PROJECTS = [
   {
     title: "Projet 1 \u2014 Logo Velocity",
     desc: "Cr\u00e9ation d'un logo professionnel pour une entreprise fictive \u00e0 partir d'un brief cr\u00e9atif.",
-    tag: "ui", meta: "Petit \u2022 2025", img: "projet1.png",
+    tag: "graphique", meta: "Petit \u2022 2025", img: "projet1.png",
     detail: {
       long: "<p>Dans le cadre de ce projet, j'ai con\u00e7u le logo <strong>Velocity</strong> pour une entreprise fictive sp\u00e9cialis\u00e9e dans la vitesse et la performance. Le travail partait d'un brief cr\u00e9atif bas\u00e9 sur un client persona imaginaire.</p><p>J'ai explor\u00e9 plusieurs directions artistiques avant de converger vers un design final \u00e9pur\u00e9 en noir et blanc, jouant sur la typographie bold et des lignes dynamiques \u00e9voquant le mouvement.</p><p>Ce projet m'a permis de m'exercer \u00e0 la lecture d'un brief et \u00e0 la traduction d'une identit\u00e9 de marque en solution graphique concr\u00e8te.</p>",
       cat: "Design graphique", size: "Petit", year: "2025", status: "Termin\u00e9", sc: "done",
@@ -486,7 +490,7 @@ var PROJECTS = [
   {
     title: "Projet 2 \u2014 Autoformation aux logiciels professionnels",
     desc: "Je me forme en autonomie \u00e0 des logiciels professionnels du num\u00e9rique et de la communication.",
-    tag: "code", meta: "Grand \u2022 2026", img: null,
+    tag: "perso", meta: "Grand \u2022 2026", img: null,
     detail: {
       long: "<p>Ce projet s'inscrit dans une logique d'apprentissage continu \u00e0 travers la pratique. Je me forme actuellement en autonomie \u00e0 l'utilisation de logiciels professionnels du domaine du num\u00e9rique et de la communication.</p><p>Je r\u00e9alise des essais et des mini-projets afin de prendre en main diff\u00e9rents outils et d'en comprendre les usages professionnels.</p><p>Chaque outil ma\u00eetris\u00e9 repr\u00e9sente une comp\u00e9tence suppl\u00e9mentaire pr\u00e9cieuse pour ma future carri\u00e8re dans le domaine du MMI.</p>",
       cat: "Auto-formation", size: "Grand", year: "2026", status: "En cours", sc: "ongoing",
@@ -496,7 +500,7 @@ var PROJECTS = [
   {
     title: "Projet 3 \u2014 Affiche Sigmar Polke",
     desc: "R\u00e9alisation d'une affiche inspir\u00e9e du travail de Sigmar Polke dans le cadre d'un exercice de cr\u00e9ation graphique.",
-    tag: "ui", meta: "Petit \u2022 2026", img: "project_3.png",
+    tag: "graphique", meta: "Petit \u2022 2026", img: "project_3.png",
     detail: {
       long: "<p>Dans le cadre d'un exercice de cr\u00e9ation graphique, j'ai r\u00e9alis\u00e9 une affiche pour une exposition fictive d\u00e9di\u00e9e \u00e0 <strong>Sigmar Polke</strong>, artiste majeur du Pop Art allemand connu pour ses exp\u00e9rimentations visuelles.</p><p>Ce projet m'a permis d'explorer les codes visuels propres \u00e0 cet artiste : les jeux de mati\u00e8res, la superposition de couches d'images et la typographie audacieuse.</p><p>L'affiche int\u00e8gre le traitement de l'image et la gestion des typographies \u00e0 fort impact dans un espace contraint.</p>",
       cat: "Design graphique", size: "Petit", year: "2026", status: "Termin\u00e9", sc: "done",
@@ -506,7 +510,7 @@ var PROJECTS = [
   {
     title: "Projet 4 \u2014 Campagne Lay's Racines (Groupe)",
     desc: "Strat\u00e9gie de communication compl\u00e8te pour la marque Lay's r\u00e9alis\u00e9e en groupe.",
-    tag: "code", meta: "Grand \u2022 2025", img: "moonboard.jpg",
+    tag: "strat", meta: "Grand \u2022 2025", img: "moonboard.jpg",
     detail: {
       long: "<p>Dans le cadre d'un projet de groupe en strat\u00e9gie de communication, nous avons con\u00e7u une campagne compl\u00e8te pour la marque <strong>Lay's</strong>, autour de l'axe <em>Lay's Racines</em>.</p><p>Notre \u00e9quipe a travaill\u00e9 sur le positionnement, les axes strat\u00e9giques, le moodboard, les messages cl\u00e9s et un plan de d\u00e9ploiement sur 4 phases.</p><p>Ce projet m'a permis de comprendre comment construire une strat\u00e9gie de communication coh\u00e9rente de A \u00e0 Z.</p>",
       cat: "Strat\u00e9gie de communication", size: "Grand", year: "2025", status: "Termin\u00e9", sc: "done",
@@ -516,21 +520,32 @@ var PROJECTS = [
   {
     title: "Projet 5 \u2014 Reportage : Racisme et M\u00e9ritocratie",
     desc: "Reportage documentaire sur le racisme et la m\u00e9ritocratie. Mon r\u00f4le : documentaliste.",
-    tag: "ui", meta: "Grand \u2022 2025", img: null,
+    tag: "av", meta: "Grand \u2022 2026", img: null,
     detail: {
       long: "<p>Dans le cadre d'un projet de reportage, notre \u00e9quipe a travaill\u00e9 sur un sujet sensible et essentiel : <strong>le racisme et la m\u00e9ritocratie</strong>. Ce documentaire explore comment les discriminations raciales peuvent freiner ou biaiser la reconnaissance du m\u00e9rite individuel dans diff\u00e9rents contextes sociaux et professionnels.</p><p>Mon r\u00f4le au sein de l'\u00e9quipe \u00e9tait celui de <strong>documentaliste</strong> : j'ai effectu\u00e9 les recherches de fond, s\u00e9lectionn\u00e9 et v\u00e9rifi\u00e9 les sources, rassembl\u00e9 les donn\u00e9es et les r\u00e9f\u00e9rences n\u00e9cessaires \u00e0 la construction du discours documentaire.</p><p>Ce projet m'a permis de d\u00e9velopper mes comp\u00e9tences en recherche documentaire, en analyse critique de l'information et en travail collaboratif sur un sujet \u00e0 fort enjeu soci\u00e9tal.</p>",
       cat: "Reportage / Documentaire", size: "Grand", year: "2025", status: "Termin\u00e9", sc: "done",
-      tools: ["Recherche documentaire", "CapCut"], pdf: null, video: "reportage.mp4", gallery: []
+      tools: ["Recherche documentaire", "CapCut"], pdf: null, video: "https://www.youtube.com/embed/x1Lvlvfe02M", gallery: []
     }
   },
   {
     title: "Projet 6 \u2014 Site Web Green Pitch (Groupe)",
     desc: "Cr\u00e9ation d'un site web de sensibilisation \u00e0 la pratique sportive pour l'association fictive Green Pitch.",
-    tag: "code", meta: "Grand \u2022 2025", img: "Green1.jpeg",
+    tag: "prog", meta: "Grand \u2022 2025", img: "Green1.jpeg",
     detail: {
       long: "<p>Dans le cadre de la SAE 1.05, notre groupe a con\u00e7u et d\u00e9velopp\u00e9 le site web de <strong>Green Pitch</strong>, une association sportive multi-sports fictive bas\u00e9e \u00e0 Saint-Claude, en Guadeloupe. L'objectif : cr\u00e9er un site accessible, ergonomique et bilingue pour valoriser la pratique sportive aupr\u00e8s d'un large public.</p><p>Le site pr\u00e9sente 7 disciplines (football, tennis, natation, volleyball, basketball, athl\u00e9tisme et e-sport). Nous avons suivi une d\u00e9marche compl\u00e8te : analyse du cahier des charges, wireframes, d\u00e9veloppement HTML/CSS/JS, tests d'accessibilit\u00e9 et validation W3C.</p><p>Points techniques notables : architecture SPA, design responsive mobile-first, mode sombre/clair, version bilingue FR/EN, navigation au clavier avec attributs ARIA, et validation de formulaire en temps r\u00e9el.</p>",
       cat: "D\u00e9veloppement web", size: "Grand", year: "2025", status: "Termin\u00e9", sc: "done",
-      tools: ["HTML5", "CSS3", "JavaScript", "Figma"], pdf: null, video: null, gallery: ["Green1.jpeg", "Green_logo.jpeg"]
+      tools: ["HTML5", "CSS3", "JavaScript", "Figma"], pdf: null, video: null, gallery: ["Green1.jpeg"]
+    }
+  }
+,
+  {
+    title: "Projet 7 — Court Métrage d'Horreur",
+    desc: "Mini court métrage d'horreur dans lequel je joue le rôle principal.",
+    tag: "av", meta: "Petit • 2025", img: null,
+    detail: {
+      long: "<p>Dans le cadre d'un projet vidéo, j'ai participé à la réalisation d'un <strong>mini court métrage d'horreur</strong> en tenant le rôle principal. Ce projet m'a permis d'explorer un nouveau médium : la fiction vidéo narrative.</p><p>En plus du jeu d'acteur, ce type de projet implique une réflexion sur la mise en scène, les angles de caméra, l'éclairage et la création d'une atmosphère. Autant d'éléments qui enrichissent ma compréhension de la production audiovisuelle.</p><p>Ce projet illustre ma capacité à m'impliquer dans des créations créatives variées et à sortir de ma zone de confort pour développer de nouvelles compétences en communication et en expression.</p>",
+      cat: "Production audiovisuelle", size: "Petit", year: "2025", status: "Terminé", sc: "done",
+      tools: ["CapCut", "Caméra"], pdf: null, video: "https://www.youtube.com/embed/Y85a9M9mVBk", gallery: []
     }
   }
 ];
@@ -591,8 +606,8 @@ function closeMenu() {
 function renderGrid(filter) {
   curFilter = filter;
   var list = filter === 'all' ? PROJECTS : PROJECTS.filter(function(p) { return p.tag === filter; });
-  document.querySelectorAll('.fb').forEach(function(b) { b.classList.remove('fa', 'fp', 'fg'); });
-  var clsMap = { all: 'fa', ui: 'fp', code: 'fg' };
+  document.querySelectorAll('.fb').forEach(function(b) { b.classList.remove('fa','fav','fgr','fst','fpr','fpe'); });
+  var clsMap = { all: 'fa', av: 'fav', graphique: 'fgr', strat: 'fst', prog: 'fpr', perso: 'fpe' };
   var btn = document.querySelector('.fb[data-f="' + filter + '"]');
   if (btn) btn.classList.add(clsMap[filter]);
   var fcnt = document.getElementById('fcnt');
@@ -668,12 +683,10 @@ function openProject(idx) {
   var videoWrap = document.getElementById('dVideoWrap');
   var videoEl = document.getElementById('dVideo');
   if (d.video) {
-    document.getElementById('dVideoSrc').src = d.video;
-    videoEl.load();
+    videoEl.src = d.video;
     videoWrap.style.display = 'block';
   } else {
-    document.getElementById('dVideoSrc').src = '';
-    videoEl.load();
+    videoEl.src = '';
     videoWrap.style.display = 'none';
   }
   var bPrev = document.getElementById('bPrev');
