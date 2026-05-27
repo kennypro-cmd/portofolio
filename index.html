@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -120,13 +120,11 @@
 
     /* DETAIL */
     .detail{padding:2.5rem 0 5rem;animation:fadeIn .4s ease both}
-    /* breadcrumb */
     .d-crumb{display:flex;align-items:center;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap}
     .d-back{display:inline-flex;align-items:center;gap:.4rem;background:none;border:1px solid var(--border);border-radius:.5rem;padding:.45rem .9rem;color:var(--foreground);font-size:.875rem;font-weight:500;transition:all .2s}
     .d-back:hover{border-color:var(--color-blue);color:var(--color-blue);background:rgba(59,130,246,.06)}
     .d-crumb-sep{color:var(--muted-fg);font-size:.875rem}
     .d-crumb-cur{font-size:.875rem;color:var(--muted-fg);max-width:22ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    /* hero banner */
     .d-hero-wrap{position:relative;margin-bottom:2rem}
     .d-hero{border-radius:1.25rem;aspect-ratio:21/7;background:linear-gradient(135deg,var(--color-blue),var(--color-orange),var(--color-red));display:flex;align-items:center;justify-content:center;font-size:6rem;box-shadow:0 8px 32px rgba(59,130,246,.2);overflow:hidden}
     .d-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.25) 0%,transparent 60%);border-radius:1.25rem;pointer-events:none}
@@ -135,19 +133,15 @@
     .d-tag.ui{background:linear-gradient(90deg,var(--color-orange),var(--color-orange-light));color:white}
     .d-tag.code{background:linear-gradient(90deg,var(--color-red),var(--color-red-light));color:white}
     .d-hero-yr{font-size:.8rem;color:rgba(255,255,255,.85);font-weight:500;background:rgba(0,0,0,.25);padding:.25rem .65rem;border-radius:9999px;backdrop-filter:blur(6px)}
-    /* title area */
     .d-title{font-size:clamp(1.35rem,4vw,2.1rem);font-weight:700;color:var(--foreground);margin-bottom:.75rem;line-height:1.3}
     .d-subtitle{font-size:1rem;color:var(--muted-fg);margin-bottom:1.5rem;line-height:1.6;max-width:65ch}
     .d-div{height:2px;background:linear-gradient(90deg,var(--color-blue),var(--color-orange),var(--color-red));border-radius:999px;margin-bottom:2rem}
-    /* body grid */
     .d-body{display:grid;grid-template-columns:1fr;gap:2rem;margin-bottom:2.5rem}
     @media(min-width:768px){.d-body{grid-template-columns:1fr 290px}}
-    /* description */
     .d-desc-wrap{background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:.75rem;padding:1.75rem;box-shadow:var(--shadow)}
     .d-desc-wrap h3{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);margin-bottom:1rem}
     .d-desc{color:var(--foreground);line-height:1.9;font-size:1rem}
     .d-desc p+p{margin-top:1.1rem}
-    /* sidebar */
     .d-side{display:flex;flex-direction:column;gap:1rem}
     .d-card{background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:.75rem;padding:1.25rem;box-shadow:var(--shadow)}
     .d-card h4{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);margin-bottom:.85rem}
@@ -163,7 +157,6 @@
     .sbadge.soon{background:rgba(107,114,128,.15);color:var(--muted-fg)}
     html.dark .sbadge.done{background:rgba(34,197,94,.2);color:#4ade80}
     html.dark .sbadge.ongoing{background:rgba(249,115,22,.2);color:var(--color-orange-light)}
-    /* prev/next nav */
     .d-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding-top:2rem;border-top:1px solid var(--border)}
     .d-nbtn{display:flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-radius:.75rem;border:1px solid var(--border);background:var(--card);color:var(--foreground);font-size:.875rem;font-weight:500;transition:all .2s;min-width:0;backdrop-filter:blur(6px)}
     .d-nbtn:hover{border-color:var(--color-blue);box-shadow:0 4px 12px rgba(59,130,246,.15);transform:translateY(-1px)}
@@ -172,7 +165,6 @@
     .d-nbtn .nbtn-label{display:flex;flex-direction:column;min-width:0}
     .d-nbtn .nbtn-hint{font-size:.7rem;color:var(--muted-fg);font-weight:400}
     .d-nbtn .nbtn-title{font-size:.8rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    /* gallery strip */
     .d-gallery{display:flex;gap:.75rem;margin-bottom:2rem;overflow-x:auto;padding-bottom:.25rem}
     .d-gitem{flex-shrink:0;width:10rem;height:6.5rem;border-radius:.5rem;background:linear-gradient(135deg,var(--color-blue),var(--color-orange),var(--color-red));display:flex;align-items:center;justify-content:center;font-size:2rem;border:1px solid var(--border);opacity:.7;transition:opacity .2s,transform .2s;overflow:hidden;cursor:pointer}
     .d-gitem:hover{opacity:1;transform:scale(1.04)}
@@ -186,14 +178,11 @@
     .lightbox-close{position:absolute;top:-.75rem;right:-.75rem;width:2.25rem;height:2.25rem;border-radius:9999px;background:white;color:#111;border:none;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.4);transition:transform .15s}
     .lightbox-close:hover{transform:scale(1.15)}
     .lightbox-hint{position:absolute;bottom:-2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.5);font-size:.75rem;white-space:nowrap}
-    /* PDF viewer */
     .d-pdf-wrap{margin-bottom:2rem}
     .d-pdf-wrap h3{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);margin-bottom:.75rem}
     .d-pdf-frame{width:100%;height:520px;border-radius:.75rem;border:1px solid var(--border);box-shadow:var(--shadow)}
     .d-pdf-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:.6rem;font-size:.875rem;color:var(--color-blue);text-decoration:underline}
     .d-pdf-link:hover{color:var(--color-blue-dark)}
-
-    /* VIDEO player */
     .d-video-wrap{margin-bottom:2rem}
     .d-video-wrap h3{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);margin-bottom:.75rem}
     .d-video-frame{width:100%;aspect-ratio:9/16;max-height:520px;border-radius:.75rem;border:1px solid var(--border);box-shadow:var(--shadow);background:#000}
@@ -224,7 +213,7 @@
 </head>
 <body>
 
-<!-- ── HEADER ── -->
+<!-- HEADER -->
 <header>
   <div class="wrap">
     <div class="h-inner">
@@ -232,7 +221,7 @@
         <div class="logo-icon">KG</div>
         <div>
           <div class="logo-name">Kenny GOFFIN</div>
-          <div class="logo-sub">Étudiant en BUT MMI</div>
+          <div class="logo-sub">&#201;tudiant en BUT MMI</div>
         </div>
       </div>
       <nav class="d" aria-label="Navigation principale">
@@ -241,9 +230,9 @@
         <a data-p="contact" onclick="nav('contact')">Contact</a>
       </nav>
       <div class="h-actions">
-        <button class="theme-btn" id="tBtn" aria-label="Thème">🌙</button>
+        <button class="theme-btn" id="tBtn" aria-label="Th&#232;me">&#127769;</button>
         <button class="burger" id="bBtn" aria-label="Menu" aria-expanded="false">
-          <span id="bIco">☰</span>
+          <span id="bIco">&#9776;</span>
         </button>
       </div>
     </div>
@@ -255,7 +244,7 @@
   </div>
 </header>
 
-<!-- ── MAIN ── -->
+<!-- MAIN -->
 <main>
 
   <!-- HOME -->
@@ -263,16 +252,16 @@
     <div class="home">
       <div class="wrap">
         <section id="s-about" aria-labelledby="ta">
-          <h2 id="ta" class="sec-title grad">À propos</h2>
+          <h2 id="ta" class="sec-title grad">&#192; propos</h2>
           <div class="about-row">
-            <figure class="av-card" style="margin:0"><div class="av-inner"><img src="photo.jpg" alt="Kenny GOFFIN" onerror="this.style.display='none';this.parentNode.innerHTML='<span style=\'color:white;font-size:2.25rem;font-weight:bold\'>KG</span>'"></div></figure>
-            <p class="bio">Je suis rigoureux, curieux et créatif. J'ai un intérêt marqué pour les jeux vidéo, le contenu vidéo et les sports de combat. J'utilise régulièrement CapCut et Canva. Mon projet professionnel est en cours de construction, dans une démarche d'apprentissage et de découverte des différents métiers du numérique.</p>
+            <figure class="av-card" style="margin:0"><div class="av-inner"><img src="photo.jpg" alt="Kenny GOFFIN" onerror="this.style.display='none';this.parentNode.innerHTML='&lt;span style=\'color:white;font-size:2.25rem;font-weight:bold\'&gt;KG&lt;/span&gt;'"></div></figure>
+            <p class="bio">Je suis rigoureux, curieux et cr&#233;atif. J'ai un int&#233;r&#234;t marqu&#233; pour les jeux vid&#233;o, le contenu vid&#233;o et les sports de combat. J'utilise r&#233;guli&#232;rement CapCut et Canva. Mon projet professionnel est en cours de construction, dans une d&#233;marche d'apprentissage et de d&#233;couverte des diff&#233;rents m&#233;tiers du num&#233;rique.</p>
           </div>
         </section>
         <section id="s-skills" aria-labelledby="tc">
-          <h2 id="tc" class="sec-title grad">Compétences</h2>
+          <h2 id="tc" class="sec-title grad">Comp&#233;tences</h2>
           <ul class="skills">
-            <li>HTML/CSS (débutant)</li><li>Design (Canva)</li>
+            <li>HTML/CSS (d&#233;butant)</li><li>Design (Canva)</li>
             <li>Montage (Premiere / CapCut)</li><li>Programmation (Python)</li>
           </ul>
         </section>
@@ -300,7 +289,7 @@
             <button class="fb fa"  data-f="all"       onclick="filterP('all')">Tous</button>
             <button class="fb"     data-f="av"        onclick="filterP('av')">Audiovisuel</button>
             <button class="fb"     data-f="graphique" onclick="filterP('graphique')">Production graphique</button>
-            <button class="fb"     data-f="strat"     onclick="filterP('strat')">Stratégie de com.</button>
+            <button class="fb"     data-f="strat"     onclick="filterP('strat')">Strat&#233;gie de com.</button>
             <button class="fb"     data-f="prog"      onclick="filterP('prog')">Programmation</button>
             <button class="fb"     data-f="perso"     onclick="filterP('perso')">Personnelle</button>
           </div>
@@ -315,8 +304,6 @@
   <div id="page-detail" class="page">
     <div class="detail">
       <div class="wrap">
-
-        <!-- Breadcrumb -->
         <div class="d-crumb">
           <button class="d-back" onclick="backProjects()">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M12 5l-7 7 7 7"/></svg>
@@ -325,8 +312,6 @@
           <span class="d-crumb-sep">/</span>
           <span class="d-crumb-cur" id="dCrumbTitle"></span>
         </div>
-
-        <!-- Hero banner -->
         <div class="d-hero-wrap">
           <div class="d-hero" id="dHero"></div>
           <div class="d-hero-badge">
@@ -334,32 +319,22 @@
             <span class="d-hero-yr" id="dYr"></span>
           </div>
         </div>
-
-        <!-- Title + short desc -->
         <h2 class="d-title" id="dTitle"></h2>
         <p class="d-subtitle" id="dSubtitle"></p>
         <div class="d-div"></div>
-
-        <!-- Galerie prévisualisation (déco) -->
         <div class="d-gallery" id="dGallery"></div>
-
-        <!-- PDF viewer (affiché seulement si le projet en a un) -->
         <div class="d-pdf-wrap" id="dPdfWrap" style="display:none">
-          <h3>📄 Document du projet</h3>
+          <h3>&#128196; Document du projet</h3>
           <iframe class="d-pdf-frame" id="dPdfFrame" src="" title="Document PDF du projet"></iframe>
           <a class="d-pdf-link" id="dPdfLink" href="" target="_blank" rel="noopener">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-            Ouvrir en plein écran
+            Ouvrir en plein &#233;cran
           </a>
         </div>
-
-        <!-- Video player (affiché seulement si le projet en a une) -->
         <div class="d-video-wrap" id="dVideoWrap" style="display:none">
-          <h3>🎬 Vidéo du projet</h3>
-          <iframe class="d-video-frame" id="dVideo" src="" title="Vidéo du projet" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
+          <h3>&#127916; Vid&#233;o du projet</h3>
+          <iframe class="d-video-frame" id="dVideo" src="" title="Vid&#233;o du projet" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
         </div>
-
-        <!-- Body : description + sidebar -->
         <div class="d-body">
           <div class="d-desc-wrap">
             <h3>Description du projet</h3>
@@ -368,24 +343,22 @@
           <aside class="d-side">
             <div class="d-card">
               <h4>Informations</h4>
-              <div class="d-row"><span>Catégorie</span><span id="diCat"></span></div>
+              <div class="d-row"><span>Cat&#233;gorie</span><span id="diCat"></span></div>
               <div class="d-row"><span>Taille</span><span id="diSize"></span></div>
-              <div class="d-row"><span>Année</span><span id="diYr"></span></div>
+              <div class="d-row"><span>Ann&#233;e</span><span id="diYr"></span></div>
               <div class="d-row"><span>Statut</span><span id="diStatus"></span></div>
             </div>
             <div class="d-card">
-              <h4>Outils utilisés</h4>
+              <h4>Outils utilis&#233;s</h4>
               <div class="d-tools" id="dTools"></div>
             </div>
           </aside>
         </div>
-
-        <!-- Prev / Next nav -->
         <div class="d-nav">
           <button class="d-nbtn" id="bPrev" onclick="navProj(-1)">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M12 5l-7 7 7 7"/></svg>
             <div class="nbtn-label">
-              <span class="nbtn-hint">Précédent</span>
+              <span class="nbtn-hint">Pr&#233;c&#233;dent</span>
               <span class="nbtn-title" id="bPrevTitle"></span>
             </div>
           </button>
@@ -397,7 +370,6 @@
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 19l7-7-7-7"/></svg>
           </button>
         </div>
-
       </div>
     </div>
   </div>
@@ -408,23 +380,26 @@
       <div class="ct-wrap">
         <div class="ct-head">
           <h1 class="grad">Me Contacter</h1>
-          <p>N'hésitez pas à me contacter pour discuter de vos projets</p>
+          <p>N'h&#233;sitez pas &#224; me contacter pour discuter de vos projets</p>
         </div>
         <div class="ok-banner" id="okBanner" role="alert">
           <svg class="ico-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <div><strong>Message envoyé !</strong> Merci, je vous répondrai dès que possible.</div>
+          <div><strong>Message envoy&#233; !</strong> Merci, je vous r&#233;pondrai d&#232;s que possible.</div>
         </div>
         <form class="ct-form" id="ctForm" action="https://formspree.io/f/TON_ID_ICI" method="POST" novalidate>
-          <p class="hint">Les champs marqués d'un <span>*</span> sont obligatoires.</p>
+          <p class="hint">Les champs marqu&#233;s d'un <span>*</span> sont obligatoires.</p>
+
+          <!-- ===== CHAMP NOM (modifi&#233; : validation caract&#232;res sp&#233;ciaux ajout&#233;e) ===== -->
           <div class="field">
             <label class="flabel" for="nom">
               <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
               Nom <span class="req">*</span>
             </label>
-            <p class="fdesc">Votre prénom et nom de famille.</p>
+            <p class="fdesc">Votre pr&#233;nom et nom de famille. Lettres uniquement &#8212; pas de chiffres ni de caract&#232;res sp&#233;ciaux.</p>
             <input class="finput" type="text" id="nom" name="nom" placeholder="Ex : Marie Dupont" autocomplete="name"/>
             <p class="ferr" id="e-nom"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg><span></span></p>
           </div>
+
           <div class="field">
             <label class="flabel" for="email">
               <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -439,9 +414,9 @@
               <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
               Message <span class="req">*</span>
             </label>
-            <p class="fdesc">10 caractères minimum, 280 maximum.</p>
-            <textarea class="ftarea" id="message" name="message" rows="5" maxlength="280" placeholder="Écrivez votre message ici…"></textarea>
-            <p class="ccount">Caractères restants : <span id="cCnt">280</span></p>
+            <p class="fdesc">10 caract&#232;res minimum, 280 maximum.</p>
+            <textarea class="ftarea" id="message" name="message" rows="5" maxlength="280" placeholder="&#201;crivez votre message ici&#8230;"></textarea>
+            <p class="ccount">Caract&#232;res restants : <span id="cCnt">280</span></p>
             <p class="ferr" id="e-message"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg><span></span></p>
           </div>
           <button type="submit" class="sbtn">
@@ -458,9 +433,9 @@
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <div class="lightbox-inner" onclick="event.stopPropagation()">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">✕</button>
-    <img id="lightboxImg" src="" alt="Aperçu plein écran" />
-    <span class="lightbox-hint">Clic en dehors ou ✕ pour fermer</span>
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">&#10005;</button>
+    <img id="lightboxImg" src="" alt="Aper&#231;u plein &#233;cran" />
+    <span class="lightbox-hint">Clic en dehors ou &#10005; pour fermer</span>
   </div>
 </div>
 
@@ -473,322 +448,239 @@
   </div>
 </footer>
 
-
-
 <script>
 var PROJECTS = [
   {
-    title: "Projet 1 \u2014 Logo Velocity",
-    desc: "Cr\u00e9ation d'un logo professionnel pour une entreprise fictive \u00e0 partir d'un brief cr\u00e9atif.",
-    tag: "graphique", meta: "Petit \u2022 2025", img: "projet1.png",
-    detail: {
-      long: "<p>Dans le cadre de ce projet, j'ai con\u00e7u le logo <strong>Velocity</strong> pour une entreprise fictive sp\u00e9cialis\u00e9e dans la vitesse et la performance. Le travail partait d'un brief cr\u00e9atif bas\u00e9 sur un client persona imaginaire.</p><p>J'ai explor\u00e9 plusieurs directions artistiques avant de converger vers un design final \u00e9pur\u00e9 en noir et blanc, jouant sur la typographie bold et des lignes dynamiques \u00e9voquant le mouvement.</p><p>Ce projet m'a permis de m'exercer \u00e0 la lecture d'un brief et \u00e0 la traduction d'une identit\u00e9 de marque en solution graphique concr\u00e8te.</p>",
-      cat: "Design graphique", size: "Petit", year: "2025", status: "Termin\u00e9", sc: "done",
-      tools: ["Photoshop"], pdf: null, video: null, gallery: ["projet1.png"]
-    }
+    title:"Projet 1 \u2014 Logo Velocity",
+    desc:"Cr\u00e9ation d'un logo professionnel pour une entreprise fictive \u00e0 partir d'un brief cr\u00e9atif.",
+    tag:"graphique",meta:"Petit \u2022 2025",img:"projet1.png",
+    detail:{long:"<p>Dans le cadre de ce projet, j'ai con\u00e7u le logo <strong>Velocity</strong> pour une entreprise fictive sp\u00e9cialis\u00e9e dans la vitesse et la performance. Le travail partait d'un brief cr\u00e9atif bas\u00e9 sur un client persona imaginaire.</p><p>J'ai explor\u00e9 plusieurs directions artistiques avant de converger vers un design final \u00e9pur\u00e9 en noir et blanc, jouant sur la typographie bold et des lignes dynamiques \u00e9voquant le mouvement.</p><p>Ce projet m'a permis de m'exercer \u00e0 la lecture d'un brief et \u00e0 la traduction d'une identit\u00e9 de marque en solution graphique concr\u00e8te.</p>",
+    cat:"Design graphique",size:"Petit",year:"2025",status:"Termin\u00e9",sc:"done",
+    tools:["Photoshop"],pdf:null,video:null,gallery:["projet1.png"]}
   },
   {
-    title: "Projet 2 \u2014 Autoformation aux logiciels professionnels",
-    desc: "Je me forme en autonomie \u00e0 des logiciels professionnels du num\u00e9rique et de la communication.",
-    tag: "perso", meta: "Grand \u2022 2026", img: null,
-    detail: {
-      long: "<p>Ce projet s'inscrit dans une logique d'apprentissage continu \u00e0 travers la pratique. Je me forme actuellement en autonomie \u00e0 l'utilisation de logiciels professionnels du domaine du num\u00e9rique et de la communication.</p><p>Je r\u00e9alise des essais et des mini-projets afin de prendre en main diff\u00e9rents outils et d'en comprendre les usages professionnels.</p><p>Chaque outil ma\u00eetris\u00e9 repr\u00e9sente une comp\u00e9tence suppl\u00e9mentaire pr\u00e9cieuse pour ma future carri\u00e8re dans le domaine du MMI.</p>",
-      cat: "Auto-formation", size: "Grand", year: "2026", status: "En cours", sc: "ongoing",
-      tools: ["Adobe Premiere Pro", "Adobe After Effects", "Python"], pdf: null, video: null, gallery: []
-    }
+    title:"Projet 2 \u2014 Autoformation aux logiciels professionnels",
+    desc:"Je me forme en autonomie \u00e0 des logiciels professionnels du num\u00e9rique et de la communication.",
+    tag:"perso",meta:"Grand \u2022 2026",img:null,
+    detail:{long:"<p>Ce projet s'inscrit dans une logique d'apprentissage continu \u00e0 travers la pratique. Je me forme actuellement en autonomie \u00e0 l'utilisation de logiciels professionnels du domaine du num\u00e9rique et de la communication.</p><p>Je r\u00e9alise des essais et des mini-projets afin de prendre en main diff\u00e9rents outils et d'en comprendre les usages professionnels.</p><p>Chaque outil ma\u00eetris\u00e9 repr\u00e9sente une comp\u00e9tence suppl\u00e9mentaire pr\u00e9cieuse pour ma future carri\u00e8re dans le domaine du MMI.</p>",
+    cat:"Auto-formation",size:"Grand",year:"2026",status:"En cours",sc:"ongoing",
+    tools:["Adobe Premiere Pro","Adobe After Effects","Python"],pdf:null,video:null,gallery:[]}
   },
   {
-    title: "Projet 3 \u2014 Affiche Sigmar Polke",
-    desc: "R\u00e9alisation d'une affiche inspir\u00e9e du travail de Sigmar Polke dans le cadre d'un exercice de cr\u00e9ation graphique.",
-    tag: "graphique", meta: "Petit \u2022 2026", img: "project_3.png",
-    detail: {
-      long: "<p>Dans le cadre d'un exercice de cr\u00e9ation graphique, j'ai r\u00e9alis\u00e9 une affiche pour une exposition fictive d\u00e9di\u00e9e \u00e0 <strong>Sigmar Polke</strong>, artiste majeur du Pop Art allemand connu pour ses exp\u00e9rimentations visuelles.</p><p>Ce projet m'a permis d'explorer les codes visuels propres \u00e0 cet artiste : les jeux de mati\u00e8res, la superposition de couches d'images et la typographie audacieuse.</p><p>L'affiche int\u00e8gre le traitement de l'image et la gestion des typographies \u00e0 fort impact dans un espace contraint.</p>",
-      cat: "Design graphique", size: "Petit", year: "2026", status: "Termin\u00e9", sc: "done",
-      tools: ["Photoshop"], pdf: null, video: null, gallery: ["project_3.png"]
-    }
+    title:"Projet 3 \u2014 Affiche Sigmar Polke",
+    desc:"R\u00e9alisation d'une affiche inspir\u00e9e du travail de Sigmar Polke dans le cadre d'un exercice de cr\u00e9ation graphique.",
+    tag:"graphique",meta:"Petit \u2022 2026",img:"project_3.png",
+    detail:{long:"<p>Dans le cadre d'un exercice de cr\u00e9ation graphique, j'ai r\u00e9alis\u00e9 une affiche pour une exposition fictive d\u00e9di\u00e9e \u00e0 <strong>Sigmar Polke</strong>, artiste majeur du Pop Art allemand connu pour ses exp\u00e9rimentations visuelles.</p><p>Ce projet m'a permis d'explorer les codes visuels propres \u00e0 cet artiste : les jeux de mati\u00e8res, la superposition de couches d'images et la typographie audacieuse.</p><p>L'affiche int\u00e8gre le traitement de l'image et la gestion des typographies \u00e0 fort impact dans un espace contraint.</p>",
+    cat:"Design graphique",size:"Petit",year:"2026",status:"Termin\u00e9",sc:"done",
+    tools:["Photoshop"],pdf:null,video:null,gallery:["project_3.png"]}
   },
   {
-    title: "Projet 4 \u2014 Campagne Lay's Racines (Groupe)",
-    desc: "Strat\u00e9gie de communication compl\u00e8te pour la marque Lay's r\u00e9alis\u00e9e en groupe.",
-    tag: "strat", meta: "Grand \u2022 2025", img: "moonboard.jpg",
-    detail: {
-      long: "<p>Dans le cadre d'un projet de groupe en strat\u00e9gie de communication, nous avons con\u00e7u une campagne compl\u00e8te pour la marque <strong>Lay's</strong>, autour de l'axe <em>Lay's Racines</em>.</p><p>Notre \u00e9quipe a travaill\u00e9 sur le positionnement, les axes strat\u00e9giques, le moodboard, les messages cl\u00e9s et un plan de d\u00e9ploiement sur 4 phases.</p><p>Ce projet m'a permis de comprendre comment construire une strat\u00e9gie de communication coh\u00e9rente de A \u00e0 Z.</p>",
-      cat: "Strat\u00e9gie de communication", size: "Grand", year: "2025", status: "Termin\u00e9", sc: "done",
-      tools: ["Canva", "PowerPoint"], pdf: "Lays_Presentation.pdf", video: null, gallery: ["moonboard.jpg"]
-    }
+    title:"Projet 4 \u2014 Campagne Lay\u2019s Racines (Groupe)",
+    desc:"Strat\u00e9gie de communication compl\u00e8te pour la marque Lay\u2019s r\u00e9alis\u00e9e en groupe.",
+    tag:"strat",meta:"Grand \u2022 2025",img:"moonboard.jpg",
+    detail:{long:"<p>Dans le cadre d'un projet de groupe en strat\u00e9gie de communication, nous avons con\u00e7u une campagne compl\u00e8te pour la marque <strong>Lay\u2019s</strong>, autour de l'axe <em>Lay\u2019s Racines</em>.</p><p>Notre \u00e9quipe a travaill\u00e9 sur le positionnement, les axes strat\u00e9giques, le moodboard, les messages cl\u00e9s et un plan de d\u00e9ploiement sur 4 phases.</p><p>Ce projet m'a permis de comprendre comment construire une strat\u00e9gie de communication coh\u00e9rente de A \u00e0 Z.</p>",
+    cat:"Strat\u00e9gie de communication",size:"Grand",year:"2025",status:"Termin\u00e9",sc:"done",
+    tools:["Canva","PowerPoint"],pdf:"Lays_Presentation.pdf",video:null,gallery:["moonboard.jpg"]}
   },
   {
-    title: "Projet 5 \u2014 Reportage : Racisme et M\u00e9ritocratie",
-    desc: "Reportage documentaire sur le racisme et la m\u00e9ritocratie. Mon r\u00f4le : documentaliste.",
-    tag: "av", meta: "Grand \u2022 2026", img: null,
-    detail: {
-      long: "<p>Dans le cadre d'un projet de reportage, notre \u00e9quipe a travaill\u00e9 sur un sujet sensible et essentiel : <strong>le racisme et la m\u00e9ritocratie</strong>. Ce documentaire explore comment les discriminations raciales peuvent freiner ou biaiser la reconnaissance du m\u00e9rite individuel dans diff\u00e9rents contextes sociaux et professionnels.</p><p>Mon r\u00f4le au sein de l'\u00e9quipe \u00e9tait celui de <strong>documentaliste</strong> : j'ai effectu\u00e9 les recherches de fond, s\u00e9lectionn\u00e9 et v\u00e9rifi\u00e9 les sources, rassembl\u00e9 les donn\u00e9es et les r\u00e9f\u00e9rences n\u00e9cessaires \u00e0 la construction du discours documentaire.</p><p>Ce projet m'a permis de d\u00e9velopper mes comp\u00e9tences en recherche documentaire, en analyse critique de l'information et en travail collaboratif sur un sujet \u00e0 fort enjeu soci\u00e9tal.</p>",
-      cat: "Reportage / Documentaire", size: "Grand", year: "2025", status: "Termin\u00e9", sc: "done",
-      tools: ["Recherche documentaire", "CapCut"], pdf: null, video: "https://www.youtube.com/embed/x1Lvlvfe02M", gallery: []
-    }
+    title:"Projet 5 \u2014 Reportage : Racisme et M\u00e9ritocratie",
+    desc:"Reportage documentaire sur le racisme et la m\u00e9ritocratie. Mon r\u00f4le : documentaliste.",
+    tag:"av",meta:"Grand \u2022 2026",img:null,
+    detail:{long:"<p>Dans le cadre d'un projet de reportage, notre \u00e9quipe a travaill\u00e9 sur un sujet sensible et essentiel : <strong>le racisme et la m\u00e9ritocratie</strong>. Ce documentaire explore comment les discriminations raciales peuvent freiner ou biaiser la reconnaissance du m\u00e9rite individuel dans diff\u00e9rents contextes sociaux et professionnels.</p><p>Mon r\u00f4le au sein de l'\u00e9quipe \u00e9tait celui de <strong>documentaliste</strong> : j'ai effectu\u00e9 les recherches de fond, s\u00e9lectionn\u00e9 et v\u00e9rifi\u00e9 les sources, rassembl\u00e9 les donn\u00e9es et les r\u00e9f\u00e9rences n\u00e9cessaires \u00e0 la construction du discours documentaire.</p><p>Ce projet m'a permis de d\u00e9velopper mes comp\u00e9tences en recherche documentaire, en analyse critique de l'information et en travail collaboratif sur un sujet \u00e0 fort enjeu soci\u00e9tal.</p>",
+    cat:"Reportage / Documentaire",size:"Grand",year:"2025",status:"Termin\u00e9",sc:"done",
+    tools:["Recherche documentaire","CapCut"],pdf:null,video:"https://www.youtube.com/embed/x1Lvlvfe02M",gallery:[]}
   },
   {
-    title: "Projet 6 \u2014 Site Web Green Pitch (Groupe)",
-    desc: "Cr\u00e9ation d'un site web de sensibilisation \u00e0 la pratique sportive pour l'association fictive Green Pitch.",
-    tag: "prog", meta: "Grand \u2022 2025", img: "Green1.jpeg",
-    detail: {
-      long: "<p>Dans le cadre de la SAE 1.05, notre groupe a con\u00e7u et d\u00e9velopp\u00e9 le site web de <strong>Green Pitch</strong>, une association sportive multi-sports fictive bas\u00e9e \u00e0 Saint-Claude, en Guadeloupe. L'objectif : cr\u00e9er un site accessible, ergonomique et bilingue pour valoriser la pratique sportive aupr\u00e8s d'un large public.</p><p>Le site pr\u00e9sente 7 disciplines (football, tennis, natation, volleyball, basketball, athl\u00e9tisme et e-sport). Nous avons suivi une d\u00e9marche compl\u00e8te : analyse du cahier des charges, wireframes, d\u00e9veloppement HTML/CSS/JS, tests d'accessibilit\u00e9 et validation W3C.</p><p>Points techniques notables : architecture SPA, design responsive mobile-first, mode sombre/clair, version bilingue FR/EN, navigation au clavier avec attributs ARIA, et validation de formulaire en temps r\u00e9el.</p>",
-      cat: "D\u00e9veloppement web", size: "Grand", year: "2025", status: "Termin\u00e9", sc: "done",
-      tools: ["HTML5", "CSS3", "JavaScript", "Figma"], pdf: null, video: null, gallery: ["Green1.jpeg"]
-    }
-  }
-,
+    title:"Projet 6 \u2014 Site Web Green Pitch (Groupe)",
+    desc:"Cr\u00e9ation d'un site web de sensibilisation \u00e0 la pratique sportive pour l'association fictive Green Pitch.",
+    tag:"prog",meta:"Grand \u2022 2025",img:"Green1.jpeg",
+    detail:{long:"<p>Dans le cadre de la SAE 1.05, notre groupe a con\u00e7u et d\u00e9velopp\u00e9 le site web de <strong>Green Pitch</strong>, une association sportive multi-sports fictive bas\u00e9e \u00e0 Saint-Claude, en Guadeloupe. L'objectif : cr\u00e9er un site accessible, ergonomique et bilingue pour valoriser la pratique sportive aupr\u00e8s d'un large public.</p><p>Le site pr\u00e9sente 7 disciplines (football, tennis, natation, volleyball, basketball, athl\u00e9tisme et e-sport). Nous avons suivi une d\u00e9marche compl\u00e8te : analyse du cahier des charges, wireframes, d\u00e9veloppement HTML/CSS/JS, tests d'accessibilit\u00e9 et validation W3C.</p><p>Points techniques notables : architecture SPA, design responsive mobile-first, mode sombre/clair, version bilingue FR/EN, navigation au clavier avec attributs ARIA, et validation de formulaire en temps r\u00e9el.</p>",
+    cat:"D\u00e9veloppement web",size:"Grand",year:"2025",status:"Termin\u00e9",sc:"done",
+    tools:["HTML5","CSS3","JavaScript","Figma"],pdf:null,video:null,gallery:["Green1.jpeg"]}
+  },
   {
-    title: "Projet 7 — Court Métrage d'Horreur",
-    desc: "Mini court métrage d'horreur dans lequel je joue le rôle principal.",
-    tag: "av", meta: "Petit • 2025", img: null,
-    detail: {
-      long: "<p>Dans le cadre d'un projet vidéo, j'ai participé à la réalisation d'un <strong>mini court métrage d'horreur</strong> en tenant le rôle principal. Ce projet m'a permis d'explorer un nouveau médium : la fiction vidéo narrative.</p><p>En plus du jeu d'acteur, ce type de projet implique une réflexion sur la mise en scène, les angles de caméra, l'éclairage et la création d'une atmosphère. Autant d'éléments qui enrichissent ma compréhension de la production audiovisuelle.</p><p>Ce projet illustre ma capacité à m'impliquer dans des créations créatives variées et à sortir de ma zone de confort pour développer de nouvelles compétences en communication et en expression.</p>",
-      cat: "Production audiovisuelle", size: "Petit", year: "2025", status: "Terminé", sc: "done",
-      tools: ["CapCut", "Caméra"], pdf: null, video: "https://www.youtube.com/embed/Y85a9M9mVBk", gallery: []
-    }
+    title:"Projet 7 \u2014 Court M\u00e9trage d'Horreur",
+    desc:"Mini court m\u00e9trage d'horreur dans lequel je joue le r\u00f4le principal.",
+    tag:"av",meta:"Petit \u2022 2025",img:null,
+    detail:{long:"<p>Dans le cadre d'un projet vid\u00e9o, j'ai particip\u00e9 \u00e0 la r\u00e9alisation d'un <strong>mini court m\u00e9trage d'horreur</strong> en tenant le r\u00f4le principal. Ce projet m'a permis d'explorer un nouveau m\u00e9dium : la fiction vid\u00e9o narrative.</p><p>En plus du jeu d'acteur, ce type de projet implique une r\u00e9flexion sur la mise en sc\u00e8ne, les angles de cam\u00e9ra, l'\u00e9clairage et la cr\u00e9ation d'une atmosph\u00e8re. Autant d'\u00e9l\u00e9ments qui enrichissent ma compr\u00e9hension de la production audiovisuelle.</p><p>Ce projet illustre ma capacit\u00e9 \u00e0 m'impliquer dans des cr\u00e9ations cr\u00e9atives vari\u00e9es et \u00e0 sortir de ma zone de confort pour d\u00e9velopper de nouvelles comp\u00e9tences en communication et en expression.</p>",
+    cat:"Production audiovisuelle",size:"Petit",year:"2025",status:"Termin\u00e9",sc:"done",
+    tools:["CapCut","Cam\u00e9ra"],pdf:null,video:"https://www.youtube.com/embed/Y85a9M9mVBk",gallery:[]}
   }
 ];
 
-var htmlEl = document.documentElement;
-var tBtn = document.getElementById('tBtn');
-function setTheme(t) {
-  htmlEl.classList.toggle('dark', t === 'dark');
-  tBtn.textContent = t === 'dark' ? '☀️' : '🌙';
-  localStorage.setItem('theme', t);
+var htmlEl=document.documentElement;
+var tBtn=document.getElementById('tBtn');
+function setTheme(t){htmlEl.classList.toggle('dark',t==='dark');tBtn.textContent=t==='dark'?'\u2600\ufe0f':'\ud83c\udf19';localStorage.setItem('theme',t);}
+setTheme(localStorage.getItem('theme')||'light');
+tBtn.addEventListener('click',function(){setTheme(htmlEl.classList.contains('dark')?'light':'dark');});
+
+var curPage='home',curFilter='all',curIdx=0;
+
+function showPage(id){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('page-'+id).classList.add('active');
+  curPage=id;hlNav(id);
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-setTheme(localStorage.getItem('theme') || 'light');
-tBtn.addEventListener('click', function() {
-  setTheme(htmlEl.classList.contains('dark') ? 'light' : 'dark');
-});
-
-var curPage = 'home', curFilter = 'all', curIdx = 0;
-
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-  document.getElementById('page-' + id).classList.add('active');
-  curPage = id;
-  hlNav(id);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function hlNav(page) {
-  var navPage = page === 'detail' ? 'projets' : page;
-  var map = { home: 'nb', projets: 'no', contact: 'nr' };
-  var cls = map[navPage] || 'no';
-  document.querySelectorAll('nav a[data-p]').forEach(function(a) {
-    a.classList.remove('nb', 'no', 'nr');
-    if (a.dataset.p === navPage) a.classList.add(cls);
+function hlNav(page){
+  var navPage=page==='detail'?'projets':page;
+  var map={home:'nb',projets:'no',contact:'nr'};
+  var cls=map[navPage]||'no';
+  document.querySelectorAll('nav a[data-p]').forEach(function(a){
+    a.classList.remove('nb','no','nr');
+    if(a.dataset.p===navPage)a.classList.add(cls);
   });
 }
-
-function nav(page) {
-  showPage(page);
-  if (page === 'projets') renderGrid(curFilter);
-}
-function navM(page) { nav(page); closeMenu(); }
+function nav(page){showPage(page);if(page==='projets')renderGrid(curFilter);}
+function navM(page){nav(page);closeMenu();}
 hlNav('home');
 
-var mNav = document.getElementById('mNav');
-var bBtn = document.getElementById('bBtn');
-var bIco = document.getElementById('bIco');
-bBtn.addEventListener('click', function() {
-  var open = mNav.classList.toggle('open');
-  bBtn.setAttribute('aria-expanded', open);
-  bIco.textContent = open ? '✕' : '☰';
+var mNav=document.getElementById('mNav');
+var bBtn=document.getElementById('bBtn');
+var bIco=document.getElementById('bIco');
+bBtn.addEventListener('click',function(){
+  var open=mNav.classList.toggle('open');
+  bBtn.setAttribute('aria-expanded',open);
+  bIco.textContent=open?'\u2715':'\u2630';
 });
-function closeMenu() {
-  mNav.classList.remove('open');
-  bBtn.setAttribute('aria-expanded', 'false');
-  bIco.textContent = '☰';
-}
+function closeMenu(){mNav.classList.remove('open');bBtn.setAttribute('aria-expanded','false');bIco.textContent='\u2630';}
 
-function renderGrid(filter) {
-  curFilter = filter;
-  var list = filter === 'all' ? PROJECTS : PROJECTS.filter(function(p) { return p.tag === filter; });
-  document.querySelectorAll('.fb').forEach(function(b) { b.classList.remove('fa','fav','fgr','fst','fpr','fpe'); });
-  var clsMap = { all: 'fa', av: 'fav', graphique: 'fgr', strat: 'fst', prog: 'fpr', perso: 'fpe' };
-  var btn = document.querySelector('.fb[data-f="' + filter + '"]');
-  if (btn) btn.classList.add(clsMap[filter]);
-  var fcnt = document.getElementById('fcnt');
-  fcnt.textContent = list.length === PROJECTS.length
-    ? PROJECTS.length + ' projet' + (PROJECTS.length > 1 ? 's' : '')
-    : list.length + ' projet' + (list.length > 1 ? 's' : '') + ' sur ' + PROJECTS.length;
-  var grid = document.getElementById('pgrid');
-  grid.innerHTML = '';
-  list.forEach(function(p, i) {
-    var realIdx = PROJECTS.indexOf(p);
-    var card = document.createElement('article');
-    card.className = 'card';
-    card.style.animationDelay = (i * 0.06) + 's';
-    card.setAttribute('data-tag', p.tag);
-    var thumb = p.img ? '<img src="' + p.img + '" alt="' + p.title + '">' : '<span>📁</span>';
-    card.innerHTML =
-      '<div class="c-thumb">' + thumb + '</div>' +
-      '<h3 class="c-title">' + p.title + '</h3>' +
-      '<p class="c-desc">' + p.desc + '</p>' +
-      '<p class="c-meta">' + p.meta + '</p>' +
-      '<button class="c-btn" onclick="openProject(' + realIdx + ')">Voir</button>';
+function renderGrid(filter){
+  curFilter=filter;
+  var list=filter==='all'?PROJECTS:PROJECTS.filter(function(p){return p.tag===filter;});
+  document.querySelectorAll('.fb').forEach(function(b){b.classList.remove('fa','fav','fgr','fst','fpr','fpe');});
+  var clsMap={all:'fa',av:'fav',graphique:'fgr',strat:'fst',prog:'fpr',perso:'fpe'};
+  var btn=document.querySelector('.fb[data-f="'+filter+'"]');
+  if(btn)btn.classList.add(clsMap[filter]);
+  var fcnt=document.getElementById('fcnt');
+  fcnt.textContent=list.length===PROJECTS.length
+    ?PROJECTS.length+' projet'+(PROJECTS.length>1?'s':'')
+    :list.length+' projet'+(list.length>1?'s':'')+' sur '+PROJECTS.length;
+  var grid=document.getElementById('pgrid');
+  grid.innerHTML='';
+  list.forEach(function(p,i){
+    var realIdx=PROJECTS.indexOf(p);
+    var card=document.createElement('article');
+    card.className='card';
+    card.style.animationDelay=(i*0.06)+'s';
+    card.setAttribute('data-tag',p.tag);
+    var thumb=p.img?'<img src="'+p.img+'" alt="'+p.title+'">':'<span>\ud83d\udcc1</span>';
+    card.innerHTML='<div class="c-thumb">'+thumb+'</div>'
+      +'<h3 class="c-title">'+p.title+'</h3>'
+      +'<p class="c-desc">'+p.desc+'</p>'
+      +'<p class="c-meta">'+p.meta+'</p>'
+      +'<button class="c-btn" onclick="openProject('+realIdx+')">Voir</button>';
     grid.appendChild(card);
   });
 }
-function filterP(f) { renderGrid(f); }
+function filterP(f){renderGrid(f);}
 
-function openProject(idx) {
-  curIdx = idx;
-  var p = PROJECTS[idx];
-  var d = p.detail;
-  var hero = document.getElementById('dHero');
-  if (p.img) {
-    hero.style.backgroundImage = 'url(' + p.img + ')';
-    hero.style.backgroundSize = 'cover';
-    hero.style.backgroundPosition = 'center';
-    hero.textContent = '';
-  } else {
-    hero.style.backgroundImage = '';
-    hero.textContent = '📁';
-  }
-  document.getElementById('dTag').textContent = p.tag === 'ui' ? 'Petit' : 'Grand';
-  document.getElementById('dTag').className = 'd-tag ' + p.tag;
-  document.getElementById('dYr').textContent = d.year;
-  document.getElementById('dTitle').textContent = p.title;
-  document.getElementById('dSubtitle').textContent = p.desc;
-  document.getElementById('dCrumbTitle').textContent = 'Projet ' + (idx + 1);
-  document.getElementById('dDesc').innerHTML = d.long;
-  document.getElementById('diCat').textContent = d.cat;
-  document.getElementById('diSize').textContent = d.size;
-  document.getElementById('diYr').textContent = d.year;
-  document.getElementById('diStatus').innerHTML = '<span class="sbadge ' + d.sc + '">' + d.status + '</span>';
-  document.getElementById('dTools').innerHTML = d.tools.map(function(t) {
-    return '<span class="d-tool">' + t + '</span>';
-  }).join('');
-  var galleryEl = document.getElementById('dGallery');
-  if (d.gallery && d.gallery.length > 0) {
-    galleryEl.innerHTML = d.gallery.map(function(src) {
-      return '<div class="d-gitem" onclick="openLightbox(\'' + src + '\')" title="Agrandir"><img src="' + src + '" alt="Apercu"></div>';
-    }).join('');
-    galleryEl.style.display = 'flex';
-  } else {
-    galleryEl.style.display = 'none';
-  }
-  var pdfWrap = document.getElementById('dPdfWrap');
-  if (d.pdf) {
-    document.getElementById('dPdfFrame').src = d.pdf;
-    document.getElementById('dPdfLink').href = d.pdf;
-    pdfWrap.style.display = 'block';
-  } else {
-    document.getElementById('dPdfFrame').src = '';
-    pdfWrap.style.display = 'none';
-  }
-  var videoWrap = document.getElementById('dVideoWrap');
-  var videoEl = document.getElementById('dVideo');
-  if (d.video) {
-    videoEl.src = d.video;
-    videoWrap.style.display = 'block';
-  } else {
-    videoEl.src = '';
-    videoWrap.style.display = 'none';
-  }
-  var bPrev = document.getElementById('bPrev');
-  var bNext = document.getElementById('bNext');
-  bPrev.disabled = idx === 0;
-  bNext.disabled = idx === PROJECTS.length - 1;
-  document.getElementById('bPrevTitle').textContent = PROJECTS[idx - 1] ? 'Projet ' + idx : '';
-  document.getElementById('bNextTitle').textContent = PROJECTS[idx + 1] ? 'Projet ' + (idx + 2) : '';
+function openProject(idx){
+  curIdx=idx;
+  var p=PROJECTS[idx];var d=p.detail;
+  var hero=document.getElementById('dHero');
+  if(p.img){hero.style.backgroundImage='url('+p.img+')';hero.style.backgroundSize='cover';hero.style.backgroundPosition='center';hero.textContent='';}
+  else{hero.style.backgroundImage='';hero.textContent='\ud83d\udcc1';}
+  document.getElementById('dTag').textContent=p.tag==='ui'?'Petit':'Grand';
+  document.getElementById('dTag').className='d-tag '+p.tag;
+  document.getElementById('dYr').textContent=d.year;
+  document.getElementById('dTitle').textContent=p.title;
+  document.getElementById('dSubtitle').textContent=p.desc;
+  document.getElementById('dCrumbTitle').textContent='Projet '+(idx+1);
+  document.getElementById('dDesc').innerHTML=d.long;
+  document.getElementById('diCat').textContent=d.cat;
+  document.getElementById('diSize').textContent=d.size;
+  document.getElementById('diYr').textContent=d.year;
+  document.getElementById('diStatus').innerHTML='<span class="sbadge '+d.sc+'">'+d.status+'</span>';
+  document.getElementById('dTools').innerHTML=d.tools.map(function(t){return '<span class="d-tool">'+t+'</span>';}).join('');
+  var galleryEl=document.getElementById('dGallery');
+  if(d.gallery&&d.gallery.length>0){
+    galleryEl.innerHTML=d.gallery.map(function(src){return '<div class="d-gitem" onclick="openLightbox(\''+src+'\')" title="Agrandir"><img src="'+src+'" alt="Apercu"></div>';}).join('');
+    galleryEl.style.display='flex';
+  }else{galleryEl.style.display='none';}
+  var pdfWrap=document.getElementById('dPdfWrap');
+  if(d.pdf){document.getElementById('dPdfFrame').src=d.pdf;document.getElementById('dPdfLink').href=d.pdf;pdfWrap.style.display='block';}
+  else{document.getElementById('dPdfFrame').src='';pdfWrap.style.display='none';}
+  var videoWrap=document.getElementById('dVideoWrap');
+  var videoEl=document.getElementById('dVideo');
+  if(d.video){videoEl.src=d.video;videoWrap.style.display='block';}
+  else{videoEl.src='';videoWrap.style.display='none';}
+  var bPrev=document.getElementById('bPrev');var bNext=document.getElementById('bNext');
+  bPrev.disabled=idx===0;bNext.disabled=idx===PROJECTS.length-1;
+  document.getElementById('bPrevTitle').textContent=PROJECTS[idx-1]?'Projet '+idx:'';
+  document.getElementById('bNextTitle').textContent=PROJECTS[idx+1]?'Projet '+(idx+2):'';
   showPage('detail');
 }
-function backProjects() { showPage('projets'); renderGrid(curFilter); }
-function navProj(dir) {
-  var n = curIdx + dir;
-  if (n >= 0 && n < PROJECTS.length) openProject(n);
-}
+function backProjects(){showPage('projets');renderGrid(curFilter);}
+function navProj(dir){var n=curIdx+dir;if(n>=0&&n<PROJECTS.length)openProject(n);}
 
-var ctForm = document.getElementById('ctForm');
-var okBanner = document.getElementById('okBanner');
-var cCnt = document.getElementById('cCnt');
-var msgEl = document.getElementById('message');
-msgEl.addEventListener('input', function() { cCnt.textContent = 280 - msgEl.value.length; });
+var ctForm=document.getElementById('ctForm');
+var okBanner=document.getElementById('okBanner');
+var cCnt=document.getElementById('cCnt');
+var msgEl=document.getElementById('message');
+msgEl.addEventListener('input',function(){cCnt.textContent=280-msgEl.value.length;});
 
-function vld(n, v) {
-  if (n === 'nom') {
-    if (!v.trim()) return 'Le nom est requis.';
-    if (v.trim().length < 2) return 'Au moins 2 caractères.';
+/* ===== VALIDATION (seul changement : ajout du test caract&#232;res sp&#233;ciaux sur 'nom') ===== */
+function vld(n,v){
+  if(n==='nom'){
+    if(!v.trim())return 'Le nom est requis.';
+    if(v.trim().length<2)return 'Au moins 2 caract\u00e8res.';
+    if(!/^[a-zA-Z\u00C0-\u024F\s\-']+$/.test(v.trim()))
+      return 'Pas de caract\u00e8res sp\u00e9ciaux ni de chiffres autoris\u00e9s.';
   }
-  if (n === 'email') {
-    if (!v.trim()) return "L'email est requis.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return 'Email invalide.';
+  if(n==='email'){
+    if(!v.trim())return "L'email est requis.";
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v))return 'Email invalide.';
   }
-  if (n === 'message') {
-    if (!v.trim()) return 'Le message est requis.';
-    if (v.trim().length < 10) return 'Au moins 10 caractères (' + v.trim().length + '/10).';
+  if(n==='message'){
+    if(!v.trim())return 'Le message est requis.';
+    if(v.trim().length<10)return 'Au moins 10 caract\u00e8res ('+v.trim().length+'/10).';
   }
   return null;
 }
-function setErr(n, msg) {
+
+function setErr(n,msg){
   document.getElementById(n).classList.add('err');
-  var e = document.getElementById('e-' + n);
-  e.querySelector('span').textContent = msg;
-  e.classList.add('show');
+  var e=document.getElementById('e-'+n);
+  e.querySelector('span').textContent=msg;e.classList.add('show');
 }
-function clrErr(n) {
+function clrErr(n){
   document.getElementById(n).classList.remove('err');
-  document.getElementById('e-' + n).classList.remove('show');
+  document.getElementById('e-'+n).classList.remove('show');
 }
-['nom', 'email', 'message'].forEach(function(n) {
-  var el = document.getElementById(n);
-  el.addEventListener('blur', function() {
-    var e = vld(n, el.value);
-    if (e) setErr(n, e); else clrErr(n);
-  });
-  el.addEventListener('input', function() {
-    if (el.classList.contains('err') && !vld(n, el.value)) clrErr(n);
-  });
+['nom','email','message'].forEach(function(n){
+  var el=document.getElementById(n);
+  el.addEventListener('blur',function(){var e=vld(n,el.value);if(e)setErr(n,e);else clrErr(n);});
+  el.addEventListener('input',function(){if(el.classList.contains('err')&&!vld(n,el.value))clrErr(n);});
 });
-ctForm.addEventListener('submit', function(e) {
+ctForm.addEventListener('submit',function(e){
   e.preventDefault();
-  var ok = true;
-  ['nom', 'email', 'message'].forEach(function(n) {
-    var err = vld(n, document.getElementById(n).value);
-    if (err) { setErr(n, err); ok = false; } else clrErr(n);
+  var ok=true;
+  ['nom','email','message'].forEach(function(n){
+    var err=vld(n,document.getElementById(n).value);
+    if(err){setErr(n,err);ok=false;}else clrErr(n);
   });
-  if (!ok) return;
-  var submitBtn = ctForm.querySelector('.sbtn');
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Envoi en cours…';
-  fetch(ctForm.action, {
-    method: 'POST',
-    body: new FormData(ctForm),
-    headers: { 'Accept': 'application/json' }
-  }).then(function(res) {
-    if (res.ok) {
-      ctForm.reset();
-      cCnt.textContent = '280';
-      okBanner.classList.add('show');
-      setTimeout(function() { okBanner.classList.remove('show'); }, 5000);
-    } else {
-      alert('Erreur lors de l\'envoi. Réessaie.');
-    }
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = '<svg class="ico-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg> Envoyer le message';
-  }).catch(function() {
-    alert('Erreur réseau. Réessaie plus tard.');
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = '<svg class="ico-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg> Envoyer le message';
-  });
+  if(!ok)return;
+  var submitBtn=ctForm.querySelector('.sbtn');
+  submitBtn.disabled=true;submitBtn.textContent='Envoi en cours\u2026';
+  fetch(ctForm.action,{method:'POST',body:new FormData(ctForm),headers:{'Accept':'application/json'}})
+    .then(function(res){
+      if(res.ok){ctForm.reset();cCnt.textContent='280';okBanner.classList.add('show');setTimeout(function(){okBanner.classList.remove('show');},5000);}
+      else{alert('Erreur lors de l\'envoi. R\u00e9essaie.');}
+      submitBtn.disabled=false;
+      submitBtn.innerHTML='<svg class="ico-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg> Envoyer le message';
+    }).catch(function(){
+      alert('Erreur r\u00e9seau. R\u00e9essaie plus tard.');
+      submitBtn.disabled=false;
+      submitBtn.innerHTML='<svg class="ico-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg> Envoyer le message';
+    });
 });
 
-function openLightbox(src) {
-  document.getElementById('lightboxImg').src = src;
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+function openLightbox(src){document.getElementById('lightboxImg').src=src;document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden';}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
 
-document.getElementById('yr').textContent = new Date().getFullYear();
+document.getElementById('yr').textContent=new Date().getFullYear();
 renderGrid('all');
 </script>
 </body>
